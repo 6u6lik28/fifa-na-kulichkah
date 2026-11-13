@@ -1,0 +1,6820 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e14"><title>FIFA на куличках — PS Championship</title><style>
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#0b0e14;color:#f5f7fb}*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #b6ff63;outline-offset:2px}.shell{max-width:1220px;margin:auto;padding:22px 18px 60px}.header{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{font-weight:950;letter-spacing:-1px;font-size:23px}.green{color:#b6ff63}.pill{border:1px solid #3e4b37;border-radius:99px;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:1px;color:#c5ffa1}.hero{padding:38px 0 22px}.eyebrow{font-size:11px;letter-spacing:2px;color:#b6ff63;font-weight:800}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.04;letter-spacing:-2px;margin:12px 0}.muted{color:#9ca8b8}.sub{line-height:1.65;max-width:720px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 20px}.filter,.tab,.btn{background:#171e29;color:#dce5ef;border:1px solid #303c4c;border-radius:12px;padding:12px 16px;font-weight:700}.filter.active,.tab.active,.btn.primary{background:#b6ff63;color:#111b0b;border-color:#b6ff63}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:16px}.tab{white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#151b25;border:1px solid #2a3544;border-radius:17px;padding:20px;min-width:0}.metric{font-size:clamp(25px,3vw,38px);font-weight:900;letter-spacing:-1px;margin:10px 0 4px}.small{font-size:12px}.section{margin-top:16px}.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}h2{font-size:20px;margin:0 0 14px}h3{font-size:16px;margin:0 0 8px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{padding:12px 10px;text-align:left;border-bottom:1px solid #303b49}th{font-size:11px;text-transform:uppercase;color:#98a6b8;letter-spacing:.5px}td{font-weight:650;font-size:14px}tr:last-child td{border-bottom:0}.winner{color:#b6ff63}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.stack{display:flex;flex-direction:column;gap:9px}.entry{border-bottom:1px solid #2b3745;padding:13px 0}.entry:last-child{border-bottom:0}.label{font-size:12px;color:#a8b5c4}.score{font-weight:900;font-size:21px;white-space:nowrap}.tag{font-size:11px;padding:5px 8px;border-radius:6px;background:#273241;color:#d1dbe8;display:inline-block}.tag.warn{background:#3d2d23;color:#ffca8e}.tag.good{background:#273a25;color:#c6ff9b}.notice{font-size:13px;line-height:1.65;color:#abb9c9}.notice strong{color:#e7edf6}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:15px}select,input{background:#0d121b;color:#edf3fb;border:1px solid #344357;border-radius:10px;padding:11px 12px;min-width:0}select{max-width:100%}.toolbar select{min-width:180px}.btn{padding:9px 12px}.detail{margin-top:12px;border-top:1px solid #344050;padding-top:14px}.hidden{display:none!important}.progress{height:8px;background:#2b3440;border-radius:8px;overflow:hidden;margin:8px 0 12px}.progress>div{height:100%;background:#b6ff63}.rank{display:grid;grid-template-columns:25px 1fr 48px;align-items:center;gap:10px;padding:8px 0}.count{font-weight:900;text-align:right}.avatar{height:50px;width:50px;border-radius:15px;background:#273340;display:grid;place-items:center;font-size:22px;font-weight:900}.person{display:flex;gap:12px;align-items:center}.twoinput{display:flex;gap:8px;flex-wrap:wrap}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{background:#101722;padding:15px;border-radius:12px}.mini strong{font-size:25px;display:block;margin-top:5px}.footer{font-size:12px;color:#7d8a9c;padding:30px 0}.toggle{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#c1cedb}.badge{font-size:11px;color:#b6ff63}.roundhead{margin-top:22px;margin-bottom:5px;color:#b6ff63;font-weight:800}.roundteams{font-size:12px;color:#9aabba;line-height:1.7;margin-bottom:8px}.split{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.kpi-label{font-size:12px;color:#9ca8b8}.help{border-left:3px solid #a8e874;padding:10px 14px;background:#19241e;border-radius:5px}.right{text-align:right}.w100{width:100%}@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.hero{padding-top:25px}.shell{padding:17px 12px 40px}.card{padding:15px}.mini-grid{grid-template-columns:repeat(3,1fr)}.toolbar select{min-width:130px}}@media(max-width:440px){.grid{grid-template-columns:repeat(2,1fr)}.metric{font-size:27px}.mini strong{font-size:20px}.mini{padding:10px}.hero h1{letter-spacing:-1px}}
+</style><style>
+.fifa-card{border-radius:22px;padding:18px 17px 15px;color:#202024;background:linear-gradient(145deg,#fff2b6,#d6a640 48%,#fff0a0 72%,#ad7924);border:2px solid #ffe4a0;box-shadow:0 12px 30px #0006;min-width:0}.fifa-card.silver{background:linear-gradient(145deg,#f4f8fa,#a5b3c1 48%,#e6edf2 75%,#8598a8);border-color:#d6e1ec}.fifa-card.bronze{background:linear-gradient(145deg,#f4d0a9,#ae754b 48%,#e7b58a 75%,#8e5535);border-color:#eac5a0}.fifa-top{display:flex;justify-content:space-between;font-size:10px;font-weight:900;letter-spacing:.7px;gap:8px}.fifa-hero{display:flex;align-items:center;justify-content:space-between;margin:18px 0 8px}.fifa-ovr{display:flex;flex-direction:column;align-items:center}.fifa-ovr strong{font-size:65px;line-height:1;font-weight:950;letter-spacing:-4px}.fifa-ovr span{font-size:13px;font-weight:900}.fifa-symbol{height:100px;width:105px;display:grid;place-items:center;font-size:40px;font-weight:950;border-radius:50%;border:3px solid #342b2570;background:#fff5}.fifa-name{text-align:center;font-size:24px;font-weight:950;letter-spacing:1px;border-bottom:1px solid #332b2455;padding-bottom:12px}.fifa-form{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:12px 0;font-weight:900;font-size:14px}.fifa-form strong{font-size:24px}.fifa-form span{font-size:10px;font-weight:650;max-width:72px;text-align:right}.fifa-attrs{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;text-align:center;border-top:1px solid #332b2455;padding-top:13px}.fifa-attrs>div{display:flex;flex-direction:column;gap:3px}.fifa-attrs b{font-size:19px}.fifa-attrs span{font-size:10px;font-weight:900}.fifa-foot{text-align:center;font-size:11px;font-weight:800;opacity:.8;margin-top:14px}@media(max-width:450px){.fifa-card{padding:16px}.fifa-ovr strong{font-size:58px}}
+
+.special-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px}.special-card{padding:20px;border-radius:20px;color:#f8f4dc;border:1px solid #a88949;background:linear-gradient(140deg,#141b2c,#352b43 60%,#1b1a29);box-shadow:0 10px 24px #0005}.special-card.iconcard{background:linear-gradient(135deg,#e6d3a1,#fff4d2 52%,#ad8652);color:#302718}.special-card .big{font-size:58px;font-weight:950;line-height:1}.special-card .tagline{font-size:11px;letter-spacing:2px;font-weight:800}.special-card h3{font-size:24px;margin:14px 0}.rivalry-item{padding:16px 0;border-bottom:1px solid #ffffff22}.rivalry-bar{height:10px;background:#29313f;border-radius:10px;overflow:hidden;margin:9px 0}.rivalry-bar>div{height:100%;background:linear-gradient(90deg,#70d6ac,#d9b25c)}.prime-svg{width:100%;height:auto;display:block;max-height:330px}.live-match{padding:12px 0;border-bottom:1px solid #ffffff22}.live-match input[type=number]{width:64px;min-width:55px;text-align:center}.live-match select{max-width:155px}.live-match .toolbar{align-items:center;gap:7px}.live-round{padding:12px 0;border-top:1px solid #ffffff22}.live-round h3{margin:4px 0 12px}.live-match label{font-size:12px}.live-match input,.live-match select{font-size:16px}.smallnote{font-size:12px;opacity:.7}.live-team-panel{padding:14px;margin:10px 0;border:1px solid #ffffff25;border-radius:14px;background:#ffffff08}.live-team-panel select,.live-team-panel input{width:100%;max-width:100%;min-height:42px;font-size:16px}.live-team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin:12px 0}.live-team-label{display:block;min-width:0}.team-under{display:block;font-size:11px;font-weight:400;opacity:.75;max-width:120px;overflow-wrap:anywhere}.live-match .toolbar strong{min-width:0;flex:1}.live-match .toolbar input[type=number]{flex:0 0 55px}
+</style></head><body><div class="shell"><header class="header"><div class="brand">FIFA <span class="green">НА КУЛИЧКАХ</span></div><div class="pill">PS CHAMPIONSHIP · ИМЕНИ ВИКТОРА ПОНЕДЕЛЬНИКА</div></header><div class="hero"><div class="eyebrow">FIFA НА КУЛИЧКАХ · OFFICIAL ARCHIVE</div><h1>История пишется<br><span class="green">в каждом матче.</span></h1><p class="muted sub">Данил / MUTANT · Артём · Федос. Все переданные чемпионаты, счёты, титулы и личные встречи — в одном месте.</p></div><div class="filters" id="filters"><button class="filter active" data-game="all">Все игры</button><button class="filter" data-game="26">FIFA 26</button><button class="filter" data-game="27">FC 27</button></div><nav class="tabs" id="tabs"><button class="tab" data-tab="rating">Карточки игроков</button><button class="tab active" data-tab="overview">Обзор</button><button class="tab" data-tab="archive">Чемпионаты</button><button class="tab" data-tab="matches">Все матчи</button><button class="tab" data-tab="h2h">Личные встречи</button><button class="tab" data-tab="players">Игроки</button><button class="tab" data-tab="special">TOTW / ICON</button><button class="tab" data-tab="rivalry">Индекс принципиальности</button><button class="tab" data-tab="prime">История прайма</button><button class="tab" data-tab="live">LIVE-турнир</button><button class="tab" data-tab="data">Данные</button></nav><main>
+<section id="overview"><div class="grid" id="metrics"></div><div class="cols section"><div class="card"><h2>Гонка чемпионских титулов</h2><div id="titles"></div></div><div class="card"><h2>Последний чемпионат</h2><div id="latest"></div></div></div><div class="cols section"><div class="card"><h2>Сводная статистика игроков</h2><div class="tablewrap" id="summary"></div></div><div class="card"><h2>Последние результаты</h2><div id="recent"></div></div></div></section>
+<section id="rating" class="hidden"><div class="card"><h2>🏆 Карточки FIFA на куличках</h2><p class="notice">ОБЩ — карьерная оценка по всем чемпионатам. ФОРМА — взвешенная оценка трёх последних турниров. Прайм ≈95, обычная игра ≈88, слабая ≈82; максимум 100. Карточки всегда общие, независимо от фильтра FIFA 26 / FC 27.</p><div id="ratingCards" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))"></div><h3 class="section">Динамика формы после каждого турнира</h3><div id="ratingHistory"></div></div></section><section id="archive" class="hidden"><div class="card"><div class="row"><h2>История чемпионатов</h2><span class="label" id="archiveCount"></span></div><div class="toolbar"><select id="tourSelect" aria-label="Выберите чемпионат"></select><select id="mode"><option value="official">Официальная таблица</option><option value="computed">По результатам матчей</option></select></div><div id="tourDetail"></div></div><div class="card section"><h2>Все чемпионаты</h2><div id="tourList"></div></div></section>
+<section id="matches" class="hidden"><div class="card"><h2>Архив матчей</h2><div class="toolbar"><select id="matchTour" aria-label="Турнир"><option value="all">Все чемпионаты</option></select><select id="matchPlayer" aria-label="Игрок"><option value="all">Все игроки</option><option value="Д">Данил</option><option value="А">Артём</option><option value="Ф">Федос</option></select><input id="matchSearch" placeholder="Команда, лига, счёт..." aria-label="Поиск"><span id="matchCount" class="label"></span></div><div id="matchList"></div><button id="more" class="btn hidden">Показать ещё</button></div></section>
+<section id="h2h" class="hidden"><div class="card"><h2>Личные встречи</h2><div class="toolbar"><select id="h1"><option value="Д">Данил</option><option value="А">Артём</option><option value="Ф">Федос</option></select><select id="h2"><option value="А">Артём</option><option value="Д">Данил</option><option value="Ф">Федос</option></select></div><div id="h2hResult"></div></div></section>
+<section id="players" class="hidden"><div id="playerCards" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))"></div></section>
+
+<section id="special" class="hidden"><div class="card"><h2>✨ Специальные карточки TOTW / ICON</h2><p class="notice">TOTW — лучший игрок каждого чемпионата по оценке выступления. ICON — историческая карточка за достижения во всём архиве. Карточки формируются автоматически.</p><div id="specialCards" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))"></div><h3 class="section">Зал лучших выступлений</h3><div id="specialHistory"></div></div></section>
+<section id="rivalry" class="hidden"><div class="card"><h2>⚔️ Индекс принципиальности</h2><p class="notice">Индекс 0–100 отражает напряжённость противостояния: число матчей, близость результатов, частоту пенальти и среднюю результативность. Это не оценка силы игроков.</p><div id="rivalryBoard"></div></div></section>
+<section id="prime" class="hidden"><div class="card"><h2>📈 История прайма</h2><p class="notice">Оценки выступлений в каждом чемпионате: 82 — слабая игра, 88 — средняя, 95 — прайм. Линии строятся по всем сохранённым турнирам.</p><div class="toolbar"><select id="primePlayer"><option value="Д">MUTANT</option><option value="А">Артём</option><option value="Ф">Федос</option></select></div><div id="primeChart"></div><div id="primeSummary"></div></div></section>
+<section id="live" class="hidden"><div class="card"><h2>🔴 LIVE-турнир</h2><p class="notice">Создай чемпионат, выбери лигу и клуб каждого игрока в туре, заполняй матчи и наблюдай за таблицей. Результаты сохраняются только в этом браузере. Для просмотра с других телефонов потребуется публикация сайта и общая база.</p><div class="toolbar"><label>Дата <input type="date" id="liveDate"></label><label>Игра <select id="liveGame"><option value="27">FC 27</option><option value="26">FIFA 26</option></select></label><label>Туров <input type="number" id="liveRounds" min="1" max="20" value="7" style="max-width:85px"></label><button class="btn primary" id="liveStart">Создать турнир</button></div><div id="liveEditor" class="section"></div><div id="liveSaved" class="section"></div></div></section>
+<section id="data" class="hidden"><div class="card"><h2>Данные и прозрачность</h2><p class="notice">В приложение включены <strong>20 исторических чемпионатов</strong> и добавленные тобой новые турниры. Для каждого матча сохранены исходный счёт, победитель пенальти (если известен), тур, лига, доступные команды и особые пометки. Все данные работают без интернета.</p><div class="split"><button class="btn primary" id="export">Скачать весь архив JSON</button><button class="btn" id="csv">Скачать матчи CSV</button></div><div id="issues" class="section"></div><div class="section help"><strong>О периодах:</strong> декабрьские турниры без года условно отнесены к декабрю 2025 и FIFA 26. Для остальных граница FIFA 26 / FC 27 проведена по сентябрю 2026. Это рабочая классификация, которую можно уточнить.</div><p class="notice">Исторические результаты не изменяются. LIVE-турниры сохраняются только на этом устройстве; для переноса данных экспортируй архив.</p></div></section>
+</main><footer class="footer">PS CHAMPIONSHIP · ARCHIVE EDITION · Карточки игроков · Все матчи и официальные таблицы</footer></div><script>const DATA=[
+  {
+    "id": "dec1",
+    "date": "2025-12-01",
+    "game": "26",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 17,
+        "gf": 34,
+        "ga": 27
+      },
+      "А": {
+        "pts": 17,
+        "gf": 37,
+        "ga": 33
+      },
+      "Ф": {
+        "pts": 11,
+        "gf": 25,
+        "ga": 35
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "dec1-1",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-2",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-3",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-4",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-5",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-6",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-7",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-8",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-9",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-10",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-11",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-12",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-13",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-14",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec1-15",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "Первый декабрьский чемпионат; точная дата и год не подтверждены",
+    "yearUncertain": true
+  },
+  {
+    "id": "dec2",
+    "date": "2025-12-02",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 24,
+        "gf": 36,
+        "ga": 22
+      },
+      "Д": {
+        "pts": 20,
+        "gf": 33,
+        "ga": 27
+      },
+      "Ф": {
+        "pts": 1,
+        "gf": 27,
+        "ga": 47
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "dec2-1",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-2",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-3",
+        "round": 1,
+        "league": "Любые команды",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-4",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 0,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-5",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-6",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-7",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-8",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-9",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-10",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-11",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-12",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-13",
+        "round": 5,
+        "league": "Супер тим",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-14",
+        "round": 5,
+        "league": "Супер тим",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "dec2-15",
+        "round": 5,
+        "league": "Супер тим",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "Второй декабрьский чемпионат; точная дата и год не подтверждены",
+    "yearUncertain": true
+  },
+  {
+    "id": "mar",
+    "date": "2026-03-01",
+    "game": "26",
+    "champ": "Ф",
+    "official": {
+      "Ф": {
+        "pts": 14,
+        "gf": 27,
+        "ga": 34
+      },
+      "А": {
+        "pts": 12,
+        "gf": 30,
+        "ga": 25
+      },
+      "Д": {
+        "pts": 10,
+        "gf": 26,
+        "ga": 26
+      }
+    },
+    "rounds": 4,
+    "matches": [
+      {
+        "id": "mar-1",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-2",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-3",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-4",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-5",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-6",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-7",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-8",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-9",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-10",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-11",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "mar-12",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Ф",
+        "b": "А",
+        "x": 7,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "Точная дата марта не указана",
+    "yearUncertain": false
+  },
+  {
+    "id": "apr1",
+    "date": "2026-04-01",
+    "game": "26",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 24,
+        "gf": 40,
+        "ga": 23
+      },
+      "А": {
+        "pts": 14,
+        "gf": 41,
+        "ga": 40
+      },
+      "Ф": {
+        "pts": 7,
+        "gf": 33,
+        "ga": 51
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "apr1-1",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-2",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 1,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-3",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-4",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "А",
+        "b": "Д",
+        "x": 0,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-5",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-6",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-7",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-8",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 9,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-9",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-10",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-11",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Ф",
+        "b": "А",
+        "x": 8,
+        "y": 8,
+        "pen": "7:6",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-12",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-13",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "А",
+        "b": "Д",
+        "x": 0,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-14",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 4,
+        "pen": "5:4",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr1-15",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "apr10",
+    "date": "2026-04-10",
+    "game": "26",
+    "champ": "Ф",
+    "official": {
+      "Ф": {
+        "pts": 16,
+        "gf": 40,
+        "ga": 30
+      },
+      "А": {
+        "pts": 15,
+        "gf": 40,
+        "ga": 46
+      },
+      "Д": {
+        "pts": 14,
+        "gf": 35,
+        "ga": 40
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "apr10-1",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 6,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-2",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-3",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-4",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-5",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-6",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-7",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-8",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Ф",
+        "b": "А",
+        "x": 8,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-9",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-10",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-11",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-12",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-13",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-14",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "apr10-15",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Д",
+        "b": "Ф",
+        "x": 0,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "may15",
+    "date": "2026-05-15",
+    "game": "26",
+    "champ": "Ф",
+    "official": {
+      "Ф": {
+        "pts": 24,
+        "gf": 58,
+        "ga": 41
+      },
+      "А": {
+        "pts": 23,
+        "gf": 43,
+        "ga": 61
+      },
+      "Д": {
+        "pts": 16,
+        "gf": 50,
+        "ga": 46
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "may15-1",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-2",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Д",
+        "b": "А",
+        "x": 0,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-3",
+        "round": 1,
+        "league": "Тур 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-4",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-5",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Д",
+        "b": "А",
+        "x": 12,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-6",
+        "round": 2,
+        "league": "Тур 2",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-7",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "А",
+        "b": "Ф",
+        "x": 6,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-8",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-9",
+        "round": 3,
+        "league": "Тур 3",
+        "a": "Ф",
+        "b": "Д",
+        "x": 6,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-10",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-11",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-12",
+        "round": 4,
+        "league": "Тур 4",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-13",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-14",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Д",
+        "b": "А",
+        "x": 0,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-15",
+        "round": 5,
+        "league": "Тур 5",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-16",
+        "round": 6,
+        "league": "Тур 6",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-17",
+        "round": 6,
+        "league": "Тур 6",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-18",
+        "round": 6,
+        "league": "Тур 6",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-19",
+        "round": 7,
+        "league": "Тур 7",
+        "a": "А",
+        "b": "Ф",
+        "x": 0,
+        "y": 10,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "техническое поражение Артёма",
+        "teams": {}
+      },
+      {
+        "id": "may15-20",
+        "round": 7,
+        "league": "Тур 7",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may15-21",
+        "round": 7,
+        "league": "Тур 7",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "may20",
+    "date": "2026-05-20",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 29,
+        "gf": 69,
+        "ga": 54
+      },
+      "Д": {
+        "pts": 26,
+        "gf": 54,
+        "ga": 55
+      },
+      "Ф": {
+        "pts": 16,
+        "gf": 57,
+        "ga": 71
+      }
+    },
+    "rounds": 8,
+    "matches": [
+      {
+        "id": "may20-1",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-2",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-3",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-4",
+        "round": 2,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-5",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-6",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-7",
+        "round": 3,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-8",
+        "round": 3,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-9",
+        "round": 3,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-10",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-11",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 6,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-12",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-13",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 7,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-14",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-15",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-16",
+        "round": 6,
+        "league": "Турция",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-17",
+        "round": 6,
+        "league": "Турция",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-18",
+        "round": 6,
+        "league": "Турция",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-19",
+        "round": 7,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-20",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "А",
+        "x": 6,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-21",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-22",
+        "round": 8,
+        "league": "Саудовская Аравия",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-23",
+        "round": 8,
+        "league": "Саудовская Аравия",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      },
+      {
+        "id": "may20-24",
+        "round": 8,
+        "league": "Саудовская Аравия",
+        "a": "Д",
+        "b": "Ф",
+        "x": 10,
+        "y": 10,
+        "pen": "?",
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {}
+      }
+    ],
+    "note": "Победитель пенальти в матче Данил—Федос 10:10 не указан; официальные очки подразумевают Федоса",
+    "yearUncertain": false
+  },
+  {
+    "id": "may28",
+    "date": "2026-05-28",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 25,
+        "gf": 55,
+        "ga": 43
+      },
+      "Ф": {
+        "pts": 23,
+        "gf": 50,
+        "ga": 40
+      },
+      "Д": {
+        "pts": 14,
+        "gf": 32,
+        "ga": 54
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "may28-1",
+        "round": 1,
+        "league": "Остальной мир",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "АПЛ XXI века",
+          "А": "Классика 20",
+          "Ф": "Ла Лига"
+        }
+      },
+      {
+        "id": "may28-2",
+        "round": 1,
+        "league": "Остальной мир",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "АПЛ XXI века",
+          "А": "Классика 20",
+          "Ф": "Ла Лига"
+        }
+      },
+      {
+        "id": "may28-3",
+        "round": 1,
+        "league": "Остальной мир",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "АПЛ XXI века",
+          "А": "Классика 20",
+          "Ф": "Ла Лига"
+        }
+      },
+      {
+        "id": "may28-4",
+        "round": 2,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Д": "Аль-Кадисия",
+          "Ф": "Аль-Наср"
+        }
+      },
+      {
+        "id": "may28-5",
+        "round": 2,
+        "league": "Саудовская лига",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Д": "Аль-Кадисия",
+          "Ф": "Аль-Наср"
+        }
+      },
+      {
+        "id": "may28-6",
+        "round": 2,
+        "league": "Саудовская лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Д": "Аль-Кадисия",
+          "Ф": "Аль-Наср"
+        }
+      },
+      {
+        "id": "may28-7",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Д": "Борнмут",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "may28-8",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Д": "Борнмут",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "may28-9",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Д": "Борнмут",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "may28-10",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Фрайбург",
+          "Д": "Айнтрахт Франкфурт"
+        }
+      },
+      {
+        "id": "may28-11",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Фрайбург",
+          "Д": "Айнтрахт Франкфурт"
+        }
+      },
+      {
+        "id": "may28-12",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Фрайбург",
+          "Д": "Айнтрахт Франкфурт"
+        }
+      },
+      {
+        "id": "may28-13",
+        "round": 5,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 0,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "may28-14",
+        "round": 5,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "may28-15",
+        "round": 5,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "may28-16",
+        "round": 6,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Д": "Атлетико Мадрид",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "may28-17",
+        "round": 6,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Д": "Атлетико Мадрид",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "may28-18",
+        "round": 6,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Д": "Атлетико Мадрид",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "may28-19",
+        "round": 7,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 5,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Португалия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "may28-20",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 1,
+        "pen": "0:1",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Португалия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "may28-21",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 10,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "техническое поражение Данила",
+        "teams": {
+          "А": "Португалия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "may31",
+    "date": "2026-05-31",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 27,
+        "gf": 59,
+        "ga": 46
+      },
+      "Д": {
+        "pts": 26,
+        "gf": 54,
+        "ga": 43
+      },
+      "Ф": {
+        "pts": 20,
+        "gf": 40,
+        "ga": 57
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "may31-1",
+        "round": 1,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Кот-д’Ивуар",
+          "Ф": "Турция"
+        }
+      },
+      {
+        "id": "may31-2",
+        "round": 1,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "Ф",
+        "x": 1,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Кот-д’Ивуар",
+          "Ф": "Турция"
+        }
+      },
+      {
+        "id": "may31-3",
+        "round": 1,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Кот-д’Ивуар",
+          "Ф": "Турция"
+        }
+      },
+      {
+        "id": "may31-4",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Манчестер Юнайтед",
+          "А": "Тоттенхэм",
+          "Ф": "Астон Вилла"
+        }
+      },
+      {
+        "id": "may31-5",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Манчестер Юнайтед",
+          "А": "Тоттенхэм",
+          "Ф": "Астон Вилла"
+        }
+      },
+      {
+        "id": "may31-6",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Манчестер Юнайтед",
+          "А": "Тоттенхэм",
+          "Ф": "Астон Вилла"
+        }
+      },
+      {
+        "id": "may31-7",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 7,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Д": "Ювентус",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "may31-8",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 7,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Д": "Ювентус",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "may31-9",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Д": "Ювентус",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "may31-10",
+        "round": 4,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Кадисия",
+          "Д": "Аль-Наср",
+          "Ф": "Аль-Хиляль"
+        }
+      },
+      {
+        "id": "may31-11",
+        "round": 4,
+        "league": "Саудовская лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Кадисия",
+          "Д": "Аль-Наср",
+          "Ф": "Аль-Хиляль"
+        }
+      },
+      {
+        "id": "may31-12",
+        "round": 4,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 5,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Кадисия",
+          "Д": "Аль-Наср",
+          "Ф": "Аль-Хиляль"
+        }
+      },
+      {
+        "id": "may31-13",
+        "round": 5,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Штутгарт",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "may31-14",
+        "round": 5,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Штутгарт",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "may31-15",
+        "round": 5,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Штутгарт",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "may31-16",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Д": "ПСЖ",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "may31-17",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Д": "ПСЖ",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "may31-18",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 9,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Д": "ПСЖ",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "may31-19",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Барселона",
+          "Д": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "may31-20",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Барселона",
+          "Д": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "may31-21",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Барселона",
+          "Д": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      }
+    ],
+    "note": "Федос: в официальной финальной таблице 20 очков, по матчам 10",
+    "yearUncertain": false
+  },
+  {
+    "id": "jun03",
+    "date": "2026-06-03",
+    "game": "26",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 27,
+        "gf": 42,
+        "ga": 17
+      },
+      "А": {
+        "pts": 12,
+        "gf": 29,
+        "ga": 35
+      },
+      "Ф": {
+        "pts": 7,
+        "gf": 22,
+        "ga": 43
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "jun03-1",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 1,
+        "y": 1,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Барселона",
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "jun03-2",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Барселона",
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "jun03-3",
+        "round": 1,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 8,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Барселона",
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "jun03-4",
+        "round": 2,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Рома",
+          "А": "Интер",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "jun03-5",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Рома",
+          "А": "Интер",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "jun03-6",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Рома",
+          "А": "Интер",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "jun03-7",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun03-8",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun03-9",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun03-10",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "Марсель",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "jun03-11",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "Марсель",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "jun03-12",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 10,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "техническое поражение Федоса",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "Марсель",
+          "Ф": "Лион"
+        }
+      },
+      {
+        "id": "jun03-13",
+        "round": 5,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Португалия",
+          "А": "Франция",
+          "Ф": "Бразилия"
+        }
+      },
+      {
+        "id": "jun03-14",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Португалия",
+          "А": "Франция",
+          "Ф": "Бразилия"
+        }
+      },
+      {
+        "id": "jun03-15",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Португалия",
+          "А": "Франция",
+          "Ф": "Бразилия"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "jun09",
+    "date": "2026-06-09",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 31,
+        "gf": 57,
+        "ga": 38
+      },
+      "Ф": {
+        "pts": 18,
+        "gf": 47,
+        "ga": 53
+      },
+      "Д": {
+        "pts": 14,
+        "gf": 43,
+        "ga": 56
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "jun09-1",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Марсель"
+        }
+      },
+      {
+        "id": "jun09-2",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Марсель"
+        }
+      },
+      {
+        "id": "jun09-3",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Марсель"
+        }
+      },
+      {
+        "id": "jun09-4",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun09-5",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 3,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun09-6",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Реал Мадрид",
+          "Ф": "Атлетико Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun09-7",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun09-8",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun09-9",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun09-10",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Байер 04"
+        }
+      },
+      {
+        "id": "jun09-11",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Байер 04"
+        }
+      },
+      {
+        "id": "jun09-12",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Байер 04"
+        }
+      },
+      {
+        "id": "jun09-13",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "Артём вёл 6:1",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Тоттенхэм"
+        }
+      },
+      {
+        "id": "jun09-14",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Тоттенхэм"
+        }
+      },
+      {
+        "id": "jun09-15",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Тоттенхэм"
+        }
+      },
+      {
+        "id": "jun09-16",
+        "round": 6,
+        "league": "Лига Турции (тур 7)",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Галатасарай",
+          "Ф": "Фенербахче",
+          "Д": "Бешикташ"
+        }
+      },
+      {
+        "id": "jun09-17",
+        "round": 6,
+        "league": "Лига Турции (тур 7)",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Галатасарай",
+          "Ф": "Фенербахче",
+          "Д": "Бешикташ"
+        }
+      },
+      {
+        "id": "jun09-18",
+        "round": 6,
+        "league": "Лига Турции (тур 7)",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Галатасарай",
+          "Ф": "Фенербахче",
+          "Д": "Бешикташ"
+        }
+      },
+      {
+        "id": "jun09-19",
+        "round": 7,
+        "league": "Сборные (тур 8)",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "jun09-20",
+        "round": 7,
+        "league": "Сборные (тур 8)",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "jun09-21",
+        "round": 7,
+        "league": "Сборные (тур 8)",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      }
+    ],
+    "note": "В оригинале туры пронумерованы 1–5, 7, 8: тур 6 не передан",
+    "yearUncertain": false
+  },
+  {
+    "id": "jun18",
+    "date": "2026-06-18",
+    "game": "26",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 27,
+        "gf": 60,
+        "ga": 52
+      },
+      "Ф": {
+        "pts": 19,
+        "gf": 54,
+        "ga": 63
+      },
+      "Д": {
+        "pts": 17,
+        "gf": 57,
+        "ga": 56
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "jun18-1",
+        "round": 1,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Норвегия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "jun18-2",
+        "round": 1,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 4,
+        "pen": "0:1",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Норвегия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "jun18-3",
+        "round": 1,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Норвегия",
+          "Ф": "Франция",
+          "Д": "Бразилия"
+        }
+      },
+      {
+        "id": "jun18-4",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Монако",
+          "Ф": "Марсель",
+          "Д": "ПСЖ"
+        }
+      },
+      {
+        "id": "jun18-5",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Монако",
+          "Ф": "Марсель",
+          "Д": "ПСЖ"
+        }
+      },
+      {
+        "id": "jun18-6",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 6,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Монако",
+          "Ф": "Марсель",
+          "Д": "ПСЖ"
+        }
+      },
+      {
+        "id": "jun18-7",
+        "round": 3,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Иттихад",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "jun18-8",
+        "round": 3,
+        "league": "Саудовская лига",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Иттихад",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "jun18-9",
+        "round": 3,
+        "league": "Саудовская лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Иттихад",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "jun18-10",
+        "round": 4,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 10,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Реал Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun18-11",
+        "round": 4,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Реал Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun18-12",
+        "round": 4,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Реал Мадрид",
+          "Д": "Барселона"
+        }
+      },
+      {
+        "id": "jun18-13",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Манчестер Юнайтед",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun18-14",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Манчестер Юнайтед",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun18-15",
+        "round": 5,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Манчестер Юнайтед",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "jun18-16",
+        "round": 6,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Милан",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun18-17",
+        "round": 6,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Милан",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun18-18",
+        "round": 6,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "Д",
+        "x": 8,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Милан",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "jun18-19",
+        "round": 7,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Германия"
+        }
+      },
+      {
+        "id": "jun18-20",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Германия"
+        }
+      },
+      {
+        "id": "jun18-21",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 1,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аргентина",
+          "Ф": "Франция",
+          "Д": "Германия"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "jun22",
+    "date": "2026-06-22",
+    "game": "26",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 24,
+        "gf": 50,
+        "ga": 23
+      },
+      "Ф": {
+        "pts": 12,
+        "gf": 47,
+        "ga": 40
+      },
+      "А": {
+        "pts": 9,
+        "gf": 25,
+        "ga": 55
+      }
+    },
+    "rounds": 5,
+    "matches": [
+      {
+        "id": "jun22-1",
+        "round": 1,
+        "league": "Чемпионшип",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Саутгемптон",
+          "Ф": "Суонси Сити",
+          "А": "Дерби Каунти"
+        }
+      },
+      {
+        "id": "jun22-2",
+        "round": 1,
+        "league": "Чемпионшип",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Саутгемптон",
+          "Ф": "Суонси Сити",
+          "А": "Дерби Каунти"
+        }
+      },
+      {
+        "id": "jun22-3",
+        "round": 1,
+        "league": "Чемпионшип",
+        "a": "Д",
+        "b": "А",
+        "x": 0,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Саутгемптон",
+          "Ф": "Суонси Сити",
+          "А": "Дерби Каунти"
+        }
+      },
+      {
+        "id": "jun22-4",
+        "round": 2,
+        "league": "Португалия",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бенфика",
+          "Ф": "Спортинг",
+          "А": "Порту"
+        }
+      },
+      {
+        "id": "jun22-5",
+        "round": 2,
+        "league": "Португалия",
+        "a": "А",
+        "b": "Ф",
+        "x": 0,
+        "y": 10,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "Артём сдался -rep",
+        "teams": {
+          "Д": "Бенфика",
+          "Ф": "Спортинг",
+          "А": "Порту"
+        }
+      },
+      {
+        "id": "jun22-6",
+        "round": 2,
+        "league": "Португалия",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бенфика",
+          "Ф": "Спортинг",
+          "А": "Порту"
+        }
+      },
+      {
+        "id": "jun22-7",
+        "round": 3,
+        "league": "Эредивизи",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Фейеноорд",
+          "Ф": "Аякс",
+          "А": "ПСВ"
+        }
+      },
+      {
+        "id": "jun22-8",
+        "round": 3,
+        "league": "Эредивизи",
+        "a": "А",
+        "b": "Ф",
+        "x": 0,
+        "y": 10,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "технарь при 0:4",
+        "teams": {
+          "Д": "Фейеноорд",
+          "Ф": "Аякс",
+          "А": "ПСВ"
+        }
+      },
+      {
+        "id": "jun22-9",
+        "round": 3,
+        "league": "Эредивизи",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Фейеноорд",
+          "Ф": "Аякс",
+          "А": "ПСВ"
+        }
+      },
+      {
+        "id": "jun22-10",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "А": "Ньюкасл"
+        }
+      },
+      {
+        "id": "jun22-11",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "А": "Ньюкасл"
+        }
+      },
+      {
+        "id": "jun22-12",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 4,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "А": "Ньюкасл"
+        }
+      },
+      {
+        "id": "jun22-13",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Колумбия",
+          "Ф": "Франция",
+          "А": "Норвегия"
+        }
+      },
+      {
+        "id": "jun22-14",
+        "round": 5,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Колумбия",
+          "Ф": "Франция",
+          "А": "Норвегия"
+        }
+      },
+      {
+        "id": "jun22-15",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 10,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Колумбия",
+          "Ф": "Франция",
+          "А": "Норвегия"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "aug31",
+    "date": "2026-08-31",
+    "game": "26",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 15,
+        "gf": 27,
+        "ga": 13
+      },
+      "А": {
+        "pts": 7,
+        "gf": 13,
+        "ga": 21
+      },
+      "Ф": {
+        "pts": 5,
+        "gf": 19,
+        "ga": 22
+      }
+    },
+    "rounds": 3,
+    "matches": [
+      {
+        "id": "aug31-1",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Аль-Хиляль",
+          "А": "Аль-Наср",
+          "Ф": "Аль-Ахли"
+        }
+      },
+      {
+        "id": "aug31-2",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 1,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Аль-Хиляль",
+          "А": "Аль-Наср",
+          "Ф": "Аль-Ахли"
+        }
+      },
+      {
+        "id": "aug31-3",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Аль-Хиляль",
+          "А": "Аль-Наср",
+          "Ф": "Аль-Ахли"
+        }
+      },
+      {
+        "id": "aug31-4",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "aug31-5",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 1,
+        "y": 1,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "aug31-6",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Ливерпуль",
+          "А": "Арсенал",
+          "Ф": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "aug31-7",
+        "round": 3,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Монако",
+          "А": "Марсель",
+          "Ф": "ПСЖ"
+        }
+      },
+      {
+        "id": "aug31-8",
+        "round": 3,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 10,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Монако",
+          "А": "Марсель",
+          "Ф": "ПСЖ"
+        }
+      },
+      {
+        "id": "aug31-9",
+        "round": 3,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Монако",
+          "А": "Марсель",
+          "Ф": "ПСЖ"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "sep25",
+    "date": "2026-09-25",
+    "game": "27",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 24,
+        "gf": 47,
+        "ga": 36
+      },
+      "Ф": {
+        "pts": 21,
+        "gf": 55,
+        "ga": 40
+      },
+      "Д": {
+        "pts": 6,
+        "gf": 29,
+        "ga": 55
+      }
+    },
+    "rounds": 6,
+    "matches": [
+      {
+        "id": "sep25-1",
+        "round": 1,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Тоттенхэм",
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед"
+        }
+      },
+      {
+        "id": "sep25-2",
+        "round": 1,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Тоттенхэм",
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед"
+        }
+      },
+      {
+        "id": "sep25-3",
+        "round": 1,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Тоттенхэм",
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед"
+        }
+      },
+      {
+        "id": "sep25-4",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "ФК Париж",
+          "Ф": "Монако"
+        }
+      },
+      {
+        "id": "sep25-5",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 8,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "ФК Париж",
+          "Ф": "Монако"
+        }
+      },
+      {
+        "id": "sep25-6",
+        "round": 2,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "ПСЖ",
+          "А": "ФК Париж",
+          "Ф": "Монако"
+        }
+      },
+      {
+        "id": "sep25-7",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 1,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Реал Мадрид",
+          "А": "Депортиво",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "sep25-8",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Реал Мадрид",
+          "А": "Депортиво",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "sep25-9",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Реал Мадрид",
+          "А": "Депортиво",
+          "Ф": "Барселона"
+        }
+      },
+      {
+        "id": "sep25-10",
+        "round": 4,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Франция",
+          "Ф": "Испания"
+        }
+      },
+      {
+        "id": "sep25-11",
+        "round": 4,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Франция",
+          "Ф": "Испания"
+        }
+      },
+      {
+        "id": "sep25-12",
+        "round": 4,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Бразилия",
+          "А": "Франция",
+          "Ф": "Испания"
+        }
+      },
+      {
+        "id": "sep25-13",
+        "round": 5,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Ф",
+        "x": 9,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Интер",
+          "А": "Рома",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "sep25-14",
+        "round": 5,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 0,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": true,
+        "note": "технарь Данила",
+        "teams": {
+          "Д": "Интер",
+          "А": "Рома",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "sep25-15",
+        "round": 5,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "А",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Интер",
+          "А": "Рома",
+          "Ф": "Наполи"
+        }
+      },
+      {
+        "id": "sep25-16",
+        "round": 6,
+        "league": "МЛС",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Интер Майами",
+          "А": "Лос-Анджелес",
+          "Ф": "Орландо"
+        }
+      },
+      {
+        "id": "sep25-17",
+        "round": 6,
+        "league": "МЛС",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 5,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Д": "Интер Майами",
+          "А": "Лос-Анджелес",
+          "Ф": "Орландо"
+        }
+      }
+    ],
+    "note": "Матч Данил—Артём в туре 6 отсутствует в источнике",
+    "yearUncertain": false
+  },
+  {
+    "id": "sep28",
+    "date": "2026-09-28",
+    "game": "27",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 30,
+        "gf": 67,
+        "ga": 47
+      },
+      "Д": {
+        "pts": 16,
+        "gf": 49,
+        "ga": 54
+      },
+      "Ф": {
+        "pts": 14,
+        "gf": 47,
+        "ga": 62
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "sep28-1",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Штутгарт"
+        }
+      },
+      {
+        "id": "sep28-2",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Штутгарт"
+        }
+      },
+      {
+        "id": "sep28-3",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд",
+          "Д": "Штутгарт"
+        }
+      },
+      {
+        "id": "sep28-4",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Арсенал",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "sep28-5",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Арсенал",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "sep28-6",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 6,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Арсенал",
+          "Ф": "Ливерпуль",
+          "Д": "Манчестер Сити"
+        }
+      },
+      {
+        "id": "sep28-7",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "sep28-8",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "sep28-9",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "sep28-10",
+        "round": 4,
+        "league": "МЛС",
+        "a": "А",
+        "b": "Ф",
+        "x": 9,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лос-Анджелес",
+          "Ф": "Интер Майами",
+          "Д": "Ванкувер"
+        }
+      },
+      {
+        "id": "sep28-11",
+        "round": 4,
+        "league": "МЛС",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лос-Анджелес",
+          "Ф": "Интер Майами",
+          "Д": "Ванкувер"
+        }
+      },
+      {
+        "id": "sep28-12",
+        "round": 4,
+        "league": "МЛС",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лос-Анджелес",
+          "Ф": "Интер Майами",
+          "Д": "Ванкувер"
+        }
+      },
+      {
+        "id": "sep28-13",
+        "round": 5,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Ф",
+        "x": 9,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "sep28-14",
+        "round": 5,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "sep28-15",
+        "round": 5,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ювентус",
+          "Ф": "Интер",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "sep28-16",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Монако"
+        }
+      },
+      {
+        "id": "sep28-17",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Монако"
+        }
+      },
+      {
+        "id": "sep28-18",
+        "round": 6,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Лион",
+          "Ф": "ПСЖ",
+          "Д": "Монако"
+        }
+      },
+      {
+        "id": "sep28-19",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Франция",
+          "Ф": "Испания",
+          "Д": "Аргентина"
+        }
+      },
+      {
+        "id": "sep28-20",
+        "round": 7,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Франция",
+          "Ф": "Испания",
+          "Д": "Аргентина"
+        }
+      },
+      {
+        "id": "sep28-21",
+        "round": 7,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Франция",
+          "Ф": "Испания",
+          "Д": "Аргентина"
+        }
+      }
+    ],
+    "note": "Стартовый штраф Данила −3 очка за техническое поражение 25.09",
+    "yearUncertain": false,
+    "penalties": {
+      "Д": -3
+    }
+  },
+  {
+    "id": "oct02",
+    "date": "2026-10-02",
+    "game": "27",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 26,
+        "gf": 55,
+        "ga": 58
+      },
+      "А": {
+        "pts": 25,
+        "gf": 65,
+        "ga": 50
+      },
+      "Ф": {
+        "pts": 12,
+        "gf": 58,
+        "ga": 68
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "oct02-1",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 6,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Кадисия"
+        }
+      },
+      {
+        "id": "oct02-2",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Д",
+        "x": 1,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Кадисия"
+        }
+      },
+      {
+        "id": "oct02-3",
+        "round": 1,
+        "league": "Саудовская лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Наср",
+          "Ф": "Аль-Хиляль",
+          "Д": "Аль-Кадисия"
+        }
+      },
+      {
+        "id": "oct02-4",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 7,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "Федос вёл 5:1",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Арсенал"
+        }
+      },
+      {
+        "id": "oct02-5",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Арсенал"
+        }
+      },
+      {
+        "id": "oct02-6",
+        "round": 2,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Ливерпуль",
+          "Ф": "Манчестер Сити",
+          "Д": "Арсенал"
+        }
+      },
+      {
+        "id": "oct02-7",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Ф": "Рома",
+          "Д": "Ювентус"
+        }
+      },
+      {
+        "id": "oct02-8",
+        "round": 3,
+        "league": "Серия А",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Ф": "Рома",
+          "Д": "Ювентус"
+        }
+      },
+      {
+        "id": "oct02-9",
+        "round": 3,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "Д",
+        "x": 8,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Интер",
+          "Ф": "Рома",
+          "Д": "Ювентус"
+        }
+      },
+      {
+        "id": "oct02-10",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct02-11",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "А",
+        "b": "Д",
+        "x": 8,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct02-12",
+        "round": 4,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Марсель",
+          "Ф": "ПСЖ",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct02-13",
+        "round": 5,
+        "league": "Португалия",
+        "a": "А",
+        "b": "Ф",
+        "x": 8,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бенфика",
+          "Ф": "Спортинг",
+          "Д": "Порту"
+        }
+      },
+      {
+        "id": "oct02-14",
+        "round": 5,
+        "league": "Португалия",
+        "a": "А",
+        "b": "Д",
+        "x": 5,
+        "y": 5,
+        "pen": "1:0",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бенфика",
+          "Ф": "Спортинг",
+          "Д": "Порту"
+        }
+      },
+      {
+        "id": "oct02-15",
+        "round": 5,
+        "league": "Португалия",
+        "a": "Ф",
+        "b": "Д",
+        "x": 9,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бенфика",
+          "Ф": "Спортинг",
+          "Д": "Порту"
+        }
+      },
+      {
+        "id": "oct02-16",
+        "round": 6,
+        "league": "Турция",
+        "a": "А",
+        "b": "Ф",
+        "x": 7,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Трабзонспор",
+          "Ф": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      },
+      {
+        "id": "oct02-17",
+        "round": 6,
+        "league": "Турция",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Трабзонспор",
+          "Ф": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      },
+      {
+        "id": "oct02-18",
+        "round": 6,
+        "league": "Турция",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Трабзонспор",
+          "Ф": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      },
+      {
+        "id": "oct02-19",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "oct02-20",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "oct02-21",
+        "round": 7,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетико Мадрид",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "oct08",
+    "date": "2026-10-08",
+    "game": "27",
+    "champ": "Д",
+    "official": {
+      "Д": {
+        "pts": 26,
+        "gf": 50,
+        "ga": 43
+      },
+      "А": {
+        "pts": 23,
+        "gf": 42,
+        "ga": 36
+      },
+      "Ф": {
+        "pts": 14,
+        "gf": 44,
+        "ga": 52
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "oct08-1",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 2,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Ренн",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct08-2",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "Д",
+        "x": 3,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Ренн",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct08-3",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Ренн",
+          "Д": "Лион"
+        }
+      },
+      {
+        "id": "oct08-4",
+        "round": 2,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бавария",
+          "А": "Байер 04",
+          "Д": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct08-5",
+        "round": 2,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бавария",
+          "А": "Байер 04",
+          "Д": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct08-6",
+        "round": 2,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "А",
+        "x": 0,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бавария",
+          "А": "Байер 04",
+          "Д": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct08-7",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 1,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Реал Мадрид",
+          "А": "Барселона",
+          "Д": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "oct08-8",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Реал Мадрид",
+          "А": "Барселона",
+          "Д": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "oct08-9",
+        "round": 3,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Реал Мадрид",
+          "А": "Барселона",
+          "Д": "Атлетико Мадрид"
+        }
+      },
+      {
+        "id": "oct08-10",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Манчестер Сити",
+          "А": "Сандерленд",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "oct08-11",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 10,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Манчестер Сити",
+          "А": "Сандерленд",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "oct08-12",
+        "round": 4,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Манчестер Сити",
+          "А": "Сандерленд",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "oct08-13",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Норвегия",
+          "Д": "Испания"
+        }
+      },
+      {
+        "id": "oct08-14",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Норвегия",
+          "Д": "Испания"
+        }
+      },
+      {
+        "id": "oct08-15",
+        "round": 5,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Норвегия",
+          "Д": "Испания"
+        }
+      },
+      {
+        "id": "oct08-16",
+        "round": 6,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Рома",
+          "А": "Наполи",
+          "Д": "Интер"
+        }
+      },
+      {
+        "id": "oct08-17",
+        "round": 6,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Рома",
+          "А": "Наполи",
+          "Д": "Интер"
+        }
+      },
+      {
+        "id": "oct08-18",
+        "round": 6,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 1,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Рома",
+          "А": "Наполи",
+          "Д": "Интер"
+        }
+      },
+      {
+        "id": "oct08-19",
+        "round": 7,
+        "league": "Турция",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 3,
+        "pen": "0:1",
+        "penwin": "А",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бешикташ",
+          "Ф": "Галатасарай",
+          "Д": "Фенербахче"
+        }
+      },
+      {
+        "id": "oct08-20",
+        "round": 7,
+        "league": "Турция",
+        "a": "Ф",
+        "b": "Д",
+        "x": 1,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бешикташ",
+          "Ф": "Галатасарай",
+          "Д": "Фенербахче"
+        }
+      },
+      {
+        "id": "oct08-21",
+        "round": 7,
+        "league": "Турция",
+        "a": "Д",
+        "b": "А",
+        "x": 6,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "За Артёма играл Федос, официально H2H Данил—Артём",
+        "teams": {
+          "А": "Бешикташ",
+          "Ф": "Галатасарай",
+          "Д": "Фенербахче"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "oct17",
+    "date": "2026-10-17",
+    "game": "27",
+    "champ": "Ф",
+    "official": {
+      "Ф": {
+        "pts": 25,
+        "gf": 45,
+        "ga": 43
+      },
+      "А": {
+        "pts": 24,
+        "gf": 51,
+        "ga": 33
+      },
+      "Д": {
+        "pts": 14,
+        "gf": 27,
+        "ga": 47
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "oct17-1",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 0,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct17-2",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "А",
+        "b": "Д",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct17-3",
+        "round": 1,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Бавария",
+          "Ф": "Боруссия Дортмунд"
+        }
+      },
+      {
+        "id": "oct17-4",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетик Бильбао",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "oct17-5",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "А",
+        "b": "Д",
+        "x": 1,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетик Бильбао",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "oct17-6",
+        "round": 2,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 9,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Атлетик Бильбао",
+          "Ф": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "oct17-7",
+        "round": 3,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Испания",
+          "Ф": "Франция",
+          "Д": "Португалия"
+        }
+      },
+      {
+        "id": "oct17-8",
+        "round": 3,
+        "league": "Сборные",
+        "a": "А",
+        "b": "Д",
+        "x": 4,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Испания",
+          "Ф": "Франция",
+          "Д": "Португалия"
+        }
+      },
+      {
+        "id": "oct17-9",
+        "round": 3,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Испания",
+          "Ф": "Франция",
+          "Д": "Португалия"
+        }
+      },
+      {
+        "id": "oct17-10",
+        "round": 4,
+        "league": "Эредивизи",
+        "a": "А",
+        "b": "Ф",
+        "x": 7,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Фейеноорд",
+          "Ф": "Аякс",
+          "Д": "ПСВ"
+        }
+      },
+      {
+        "id": "oct17-11",
+        "round": 4,
+        "league": "Эредивизи",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Фейеноорд",
+          "Ф": "Аякс",
+          "Д": "ПСВ"
+        }
+      },
+      {
+        "id": "oct17-12",
+        "round": 4,
+        "league": "Эредивизи",
+        "a": "Ф",
+        "b": "Д",
+        "x": 5,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Фейеноорд",
+          "Ф": "Аякс",
+          "Д": "ПСВ"
+        }
+      },
+      {
+        "id": "oct17-13",
+        "round": 5,
+        "league": "Португалия",
+        "a": "А",
+        "b": "Ф",
+        "x": 5,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Порту",
+          "Ф": "Спортинг",
+          "Д": "Бенфика"
+        }
+      },
+      {
+        "id": "oct17-14",
+        "round": 5,
+        "league": "Португалия",
+        "a": "А",
+        "b": "Д",
+        "x": 7,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Порту",
+          "Ф": "Спортинг",
+          "Д": "Бенфика"
+        }
+      },
+      {
+        "id": "oct17-15",
+        "round": 5,
+        "league": "Португалия",
+        "a": "Ф",
+        "b": "Д",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Порту",
+          "Ф": "Спортинг",
+          "Д": "Бенфика"
+        }
+      },
+      {
+        "id": "oct17-16",
+        "round": 6,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Ф",
+        "x": 4,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Хиляль",
+          "Ф": "Аль-Ахли",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "oct17-17",
+        "round": 6,
+        "league": "Саудовская лига",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Хиляль",
+          "Ф": "Аль-Ахли",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "oct17-18",
+        "round": 6,
+        "league": "Саудовская лига",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Аль-Хиляль",
+          "Ф": "Аль-Ахли",
+          "Д": "Аль-Наср"
+        }
+      },
+      {
+        "id": "oct17-19",
+        "round": 7,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Ф",
+        "x": 2,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Халл Сити",
+          "Ф": "Манчестер Сити",
+          "Д": "Ковентри Сити"
+        }
+      },
+      {
+        "id": "oct17-20",
+        "round": 7,
+        "league": "АПЛ",
+        "a": "А",
+        "b": "Д",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Халл Сити",
+          "Ф": "Манчестер Сити",
+          "Д": "Ковентри Сити"
+        }
+      },
+      {
+        "id": "oct17-21",
+        "round": 7,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "Д",
+        "x": 2,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "А": "Халл Сити",
+          "Ф": "Манчестер Сити",
+          "Д": "Ковентри Сити"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  },
+  {
+    "id": "nov05",
+    "date": "2026-11-05",
+    "game": "27",
+    "champ": "А",
+    "official": {
+      "А": {
+        "pts": 23,
+        "gf": 58,
+        "ga": 46
+      },
+      "Ф": {
+        "pts": 23,
+        "gf": 45,
+        "ga": 43
+      },
+      "Д": {
+        "pts": 17,
+        "gf": 41,
+        "ga": 57
+      }
+    },
+    "rounds": 7,
+    "matches": [
+      {
+        "id": "nov05-1",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Лилль",
+          "Д": "ФК Париж"
+        }
+      },
+      {
+        "id": "nov05-2",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Лилль",
+          "Д": "ФК Париж"
+        }
+      },
+      {
+        "id": "nov05-3",
+        "round": 1,
+        "league": "Лига 1",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "0:1",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "ПСЖ",
+          "А": "Лилль",
+          "Д": "ФК Париж"
+        }
+      },
+      {
+        "id": "nov05-4",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 4,
+        "pen": "1:0",
+        "penwin": "Ф",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Комо",
+          "А": "Милан",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "nov05-5",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 3,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Комо",
+          "А": "Милан",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "nov05-6",
+        "round": 2,
+        "league": "Серия А",
+        "a": "Д",
+        "b": "Ф",
+        "x": 1,
+        "y": 5,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Комо",
+          "А": "Милан",
+          "Д": "Рома"
+        }
+      },
+      {
+        "id": "nov05-7",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "nov05-8",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "А",
+        "x": 2,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "nov05-9",
+        "round": 3,
+        "league": "АПЛ",
+        "a": "Д",
+        "b": "Ф",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Челси",
+          "А": "Манчестер Юнайтед",
+          "Д": "Борнмут"
+        }
+      },
+      {
+        "id": "nov05-10",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Ф",
+        "b": "А",
+        "x": 3,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Фрайбург",
+          "А": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "nov05-11",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Фрайбург",
+          "А": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "nov05-12",
+        "round": 4,
+        "league": "Бундеслига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 5,
+        "y": 4,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Фрайбург",
+          "А": "Боруссия Дортмунд",
+          "Д": "Бавария"
+        }
+      },
+      {
+        "id": "nov05-13",
+        "round": 5,
+        "league": "Ла Лига",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бетис",
+          "А": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "nov05-14",
+        "round": 5,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 7,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бетис",
+          "А": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "nov05-15",
+        "round": 5,
+        "league": "Ла Лига",
+        "a": "Д",
+        "b": "Ф",
+        "x": 2,
+        "y": 2,
+        "pen": "1:0",
+        "penwin": "Д",
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бетис",
+          "А": "Барселона",
+          "Д": "Реал Мадрид"
+        }
+      },
+      {
+        "id": "nov05-16",
+        "round": 6,
+        "league": "Сборные",
+        "a": "Ф",
+        "b": "А",
+        "x": 4,
+        "y": 3,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Германия",
+          "Д": "Англия"
+        }
+      },
+      {
+        "id": "nov05-17",
+        "round": 6,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "А",
+        "x": 3,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Германия",
+          "Д": "Англия"
+        }
+      },
+      {
+        "id": "nov05-18",
+        "round": 6,
+        "league": "Сборные",
+        "a": "Д",
+        "b": "Ф",
+        "x": 6,
+        "y": 2,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Франция",
+          "А": "Германия",
+          "Д": "Англия"
+        }
+      },
+      {
+        "id": "nov05-19",
+        "round": 7,
+        "league": "Турция",
+        "a": "Ф",
+        "b": "А",
+        "x": 5,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бешикташ",
+          "А": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      },
+      {
+        "id": "nov05-20",
+        "round": 7,
+        "league": "Турция",
+        "a": "Д",
+        "b": "А",
+        "x": 1,
+        "y": 6,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бешикташ",
+          "А": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      },
+      {
+        "id": "nov05-21",
+        "round": 7,
+        "league": "Турция",
+        "a": "Д",
+        "b": "Ф",
+        "x": 3,
+        "y": 1,
+        "pen": null,
+        "penwin": null,
+        "technical": false,
+        "note": "",
+        "teams": {
+          "Ф": "Бешикташ",
+          "А": "Фенербахче",
+          "Д": "Галатасарай"
+        }
+      }
+    ],
+    "note": "",
+    "yearUncertain": false
+  }
+];
+// Пользовательские завершённые турниры хранятся только локально.
+try{const saved=JSON.parse(localStorage.getItem('kulichki_tournaments_v1')||'[]');if(Array.isArray(saved))for(const t of saved){if(t&&t.id&&t.official&&Array.isArray(t.matches)&&!DATA.some(x=>x.id===t.id))DATA.push(t)}}catch(e){console.warn('Сохранённые турниры недоступны',e)}
+const N={Д:'Данил / MUTANT',А:'Артём',Ф:'Федос'},P=['А','Д','Ф'];let game='all',tab='overview',selected='nov05',limit=80;const $=x=>document.getElementById(x);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=t=>t.yearUncertain?(t.id==='dec1'?'Декабрь · №1':'Декабрь · №2'):t.id==='mar'?'Март 2026':new Date(t.date+'T12:00:00').toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric'});const pool=()=>DATA.filter(t=>game==='all'||t.game===game);const flat=ts=>ts.flatMap(t=>t.matches.map(m=>({...m,tour:t.id,date:t.date,game:t.game,tourName:fmt(t)})));const win=m=>m.x!==m.y?(m.x>m.y?m.a:m.b):m.penwin;const matchPts=(m,p)=>{if(m.x===m.y)return m.penwin?(m.penwin===p?2:1):null;return win(m)===p?3:0};function calc(ts){let o=Object.fromEntries(['Д','А','Ф'].map(p=>[p,{p,titles:0,played:0,w:0,wp:0,lp:0,l:0,unknown:0,pts:0,gf:0,ga:0,technical:0}]));for(const t of ts){o[t.champ].titles++;for(const [p,v] of Object.entries(t.penalties||{}))o[p].pts+=v;for(const m of t.matches){for(const p of [m.a,m.b]){let q=o[p];q.played++;q.gf+=p===m.a?m.x:m.y;q.ga+=p===m.a?m.y:m.x;let pts=matchPts(m,p);if(pts===null){q.unknown++;continue}q.pts+=pts;if(pts===3)q.w++;else if(pts===2)q.wp++;else if(pts===1)q.lp++;else q.l++;if(m.technical&&pts===0)q.technical++}}}return o}function tourCalc(t){let x=calc([t]);return Object.values(x).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf)}const rank=t=>Object.entries(t.official).map(([p,v])=>({p,...v})).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf);function statrow(x){return `<tr><td>${esc(N[x.p])}</td><td>${x.played}</td><td>${x.w+x.wp}</td><td>${x.wp}</td><td>${x.lp}</td><td>${x.gf}:${x.ga}</td><td>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td></tr>`}function renderOverview(){let ts=pool(),ms=flat(ts),s=calc(ts),top=Math.max(...Object.values(s).map(x=>x.titles));$('metrics').innerHTML=[['Чемпионатов',ts.length,'В ИСТОРИИ'],['Матчей',ms.length,'С РЕЗУЛЬТАТОМ'],['Голов',ms.reduce((a,m)=>a+m.x+m.y,0),'ПО СЧЕТАМ МАТЧЕЙ'],['Серий пенальти',ms.filter(m=>m.pen).length,'ВКЛЮЧАЯ НЕУТОЧНЁННЫЕ']].map(x=>`<div class="card"><div class="muted small">${x[0]}</div><div class="metric">${x[1]}</div><div class="eyebrow">${x[2]}</div></div>`).join('');$('titles').innerHTML=Object.values(s).sort((a,b)=>b.titles-a.titles).map(x=>`<div class="rank"><div>${x.p==='А'?'🥇':x.p==='Д'?'⚡':'🎯'}</div><div><strong>${esc(N[x.p])}</strong><div class="progress"><div style="width:${top?x.titles/top*100:0}%"></div></div></div><div class="count">${x.titles} 🏆</div></div>`).join('');let t=ts.at(-1);$('latest').innerHTML=t?`<div class="eyebrow">${t.game==='26'?'FIFA 26':'FC 27'} · ${fmt(t)}</div><div class="metric">${esc(N[t.champ])}</div><div class="muted">Чемпион · ${t.official[t.champ].pts} очков</div><div class="section tablewrap">${tableOfficial(t)}</div><button class="btn" data-tour="${t.id}">Открыть чемпионат</button>`:'Нет данных';$('summary').innerHTML=`<table><thead><tr><th>Игрок</th><th>И</th><th>Поб.</th><th>Пен. В</th><th>Пен. П</th><th>Голы</th><th>РМ</th></tr></thead><tbody>${Object.values(s).sort((a,b)=>b.titles-a.titles).map(statrow).join('')}</tbody></table><p class="notice">Победы включают серии пенальти. Голы подсчитаны по счетам матчей.</p>`;$('recent').innerHTML=ms.slice(-5).reverse().map(matchLine).join('')}
+function tableOfficial(t){return `<table><thead><tr><th>#</th><th>Игрок</th><th>Очки</th><th>Голы</th><th>РМ</th></tr></thead><tbody>${rank(t).map((x,i)=>`<tr><td class="${i===0?'winner':''}">${i+1}</td><td class="${i===0?'winner':''}">${esc(N[x.p])}${i===0?' 🏆':''}</td><td>${x.pts}</td><td>${x.gf}:${x.ga}</td><td>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td></tr>`).join('')}</tbody></table>`}function tableComputed(t){return `<table><thead><tr><th>#</th><th>Игрок</th><th>Очки</th><th>Голы</th><th>РМ</th><th>И</th></tr></thead><tbody>${tourCalc(t).map((x,i)=>`<tr><td>${i+1}</td><td>${esc(N[x.p])}</td><td>${x.pts}${x.unknown?'*':''}</td><td>${x.gf}:${x.ga}</td><td>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td><td>${x.played}</td></tr>`).join('')}</tbody></table>`}function mismatch(t){const c=calc([t]);return Object.keys(t.official).filter(p=>{let a=t.official[p],b=c[p];return a.pts!==b.pts||a.gf!==b.gf||a.ga!==b.ga}).length}function renderArchive(){let ts=pool(),id=$('tourSelect').value||selected;if(!ts.some(t=>t.id===id))id=ts.at(-1)?.id;selected=id;$('tourSelect').innerHTML=ts.slice().reverse().map(t=>`<option value="${t.id}" ${t.id===id?'selected':''}>${fmt(t)} · ${t.game==='26'?'FIFA 26':'FC 27'}</option>`).join('');$('archiveCount').textContent=ts.length+' чемпионатов';const t=ts.find(t=>t.id===id);if(!t){$('tourDetail').innerHTML='Нет данных';return}const m=mismatch(t);$('tourDetail').innerHTML=`<div class="row"><div><div class="eyebrow">${t.game==='26'?'FIFA 26':'FC 27'} · ${fmt(t)}</div><h2 style="margin:10px 0">🏆 ${esc(N[t.champ])}</h2><div class="label">${t.rounds} туров · ${t.matches.length} матчей</div></div><span class="tag ${m?'warn':'good'}">${m?'Есть расхождения':'Данные совпадают'}</span></div><div class="tablewrap section">${$('mode').value==='official'?tableOfficial(t):tableComputed(t)}</div>${m?`<p class="notice">Официальная таблица отличается от пересчёта по матчам у ${m} игроков. Исходные значения не изменены.</p>`:''}${t.note?`<p class="notice">📝 ${esc(t.note)}</p>`:''}${t.penalties?`<p class="notice">⚖️ Дисциплинарный штраф: Данил −3 очка до первого тура.</p>`:''}<div class="detail"><h3>Туры и результаты</h3>${Array.from({length:t.rounds},(_,i)=>{let ms=t.matches.filter(m=>m.round===i+1),head=ms[0];return `<div class="roundhead">${i+1}-й тур · ${esc(head?.league||'')}</div>${head&&Object.keys(head.teams).length?`<div class="roundteams">${Object.entries(head.teams).map(([p,team])=>`${esc(N[p])}: ${esc(team)}`).join(' · ')}</div>`:''}${ms.map(matchLine).join('')}`}).join('')}</div>`;$('tourList').innerHTML=ts.slice().reverse().map(x=>`<div class="entry row"><div><strong>${fmt(x)}</strong> <span class="tag">${x.game==='26'?'FIFA 26':'FC 27'}</span><div class="label">🏆 ${esc(N[x.champ])} · ${x.official[x.champ].pts} очков · ${x.matches.length} матчей</div></div><button class="btn" data-tour="${x.id}">Смотреть</button></div>`).join('')}
+function matchLine(m){let tag=m.technical?'<span class="tag warn">Технический</span>':m.pen?`<span class="tag">${m.pen==='?'?'Пенальти: ?':'Пенальти '+esc(m.pen)}</span>`:'';return `<div class="entry row"><div><strong>${esc(N[m.a])}</strong> <span class="muted">—</span> <strong>${esc(N[m.b])}</strong><div class="label">${esc(m.tourName||'')} · Тур ${m.round} · ${esc(m.league)}${m.teams?.[m.a]?' · '+esc(m.teams[m.a])+' / '+esc(m.teams[m.b]||''):''}</div>${m.note?`<div class="label">📝 ${esc(m.note)}</div>`:''}</div><div class="right"><div class="score">${m.x}:${m.y}</div>${tag}</div></div>`}
+function renderMatches(){let ts=pool(),selectedTour=$('matchTour').value;let options='<option value="all">Все чемпионаты</option>'+ts.slice().reverse().map(t=>`<option value="${t.id}">${fmt(t)}</option>`).join('');$('matchTour').innerHTML=options;if(ts.some(t=>t.id===selectedTour))$('matchTour').value=selectedTour;let ms=flat(ts).reverse().filter(m=>($('matchTour').value==='all'||m.tour===$('matchTour').value)&&($('matchPlayer').value==='all'||[m.a,m.b].includes($('matchPlayer').value)));let q=$('matchSearch').value.trim().toLowerCase();if(q)ms=ms.filter(m=>[m.league,m.teams[m.a],m.teams[m.b],m.x+':'+m.y,N[m.a],N[m.b],m.note,m.tourName].join(' ').toLowerCase().includes(q));$('matchCount').textContent=ms.length+' матчей';$('matchList').innerHTML=ms.slice(0,limit).map(matchLine).join('')||'<p class="muted">Матчи не найдены</p>';$('more').classList.toggle('hidden',ms.length<=limit)}
+function renderH2H(){let a=$('h1').value,b=$('h2').value;if(a===b){$('h2hResult').innerHTML='<p class="notice">Выбери двух разных игроков.</p>';return}let ms=flat(pool()).filter(m=>[m.a,m.b].includes(a)&&[m.a,m.b].includes(b));let w1=0,w2=0,g1=0,g2=0,p1=0,p2=0,unknown=0;for(let m of ms){g1+=m.a===a?m.x:m.y;g2+=m.a===b?m.x:m.y;let w=win(m);if(w===a){w1++;if(m.pen)p1++}else if(w===b){w2++;if(m.pen)p2++}else unknown++}$('h2hResult').innerHTML=`<div class="mini-grid"><div class="mini"><div class="kpi-label">${esc(N[a])} · Победы</div><strong>${w1}</strong></div><div class="mini"><div class="kpi-label">Матчей</div><strong>${ms.length}</strong></div><div class="mini"><div class="kpi-label">${esc(N[b])} · Победы</div><strong>${w2}</strong></div></div><div class="section"><h3>Голы: ${g1}:${g2}</h3><p class="notice">Победы по пенальти: ${p1}:${p2}. ${unknown?`Без известного победителя: ${unknown}.`:''} Матч 08.10 (6:4) официально относится к Данилу и Артёму.</p></div><h3 class="section">Последние личные встречи</h3>${ms.slice(-12).reverse().map(matchLine).join('')}`}
+// Независимые рейтинги для FIFA 26, FC 27 и общей истории.
+// Elo начинается с 1500, а отображаемая шкала ограничена 0–100.
+function ratingCalc(ts){
+ const elo={Д:1500,А:1500,Ф:1500},played={Д:0,А:0,Ф:0},history=[];
+ const ordered=ts.slice().sort((a,b)=>a.date.localeCompare(b.date));
+ for(const t of ordered){
+  for(const m of t.matches){
+   if(!['Д','А','Ф'].includes(m.a)||!['Д','А','Ф'].includes(m.b))continue;
+   const a=m.a,b=m.b;let score;
+   if(m.x!==m.y)score=m.x>m.y?1:0;
+   else if(m.penwin)score=m.penwin===a?1:0;
+   else continue; // неизвестный победитель пенальти
+   const expected=1/(1+Math.pow(10,(elo[b]-elo[a])/400));
+   const k=m.pen?20:32;const change=k*(score-expected);
+   elo[a]+=change;elo[b]-=change;played[a]++;played[b]++;
+  }
+  history.push({name:fmt(t),game:t.game,ratings:Object.fromEntries(['Д','А','Ф'].map(p=>[p,ratingValue(elo[p])]))});
+ }
+ return {elo,played,history,ratings:Object.fromEntries(['Д','А','Ф'].map(p=>[p,ratingValue(elo[p])]))};
+}
+function ratingValue(elo){return Math.max(0,Math.min(100,Math.round(100/(1+Math.exp(-(elo-1500)/125)))))}
+// Рейтинги в духе FIFA: слабый турнир ≈82, обычный ≈88, прайм ≈95.
+// Турнирная оценка использует официальные очки, место и результативность.
+const clamp100=v=>Math.max(0,Math.min(100,Math.round(v)));
+const clamp=v=>Math.max(0,Math.min(1,v));
+function tournamentGrade(t,p){
+ const ms=t.matches.filter(m=>m.a===p||m.b===p);
+ if(!ms.length)return null;
+ const gf=ms.reduce((v,m)=>v+(m.a===p?m.x:m.y),0);
+ const ga=ms.reduce((v,m)=>v+(m.a===p?m.y:m.x),0);
+ const wins=ms.filter(m=>win(m)===p).length;
+ const official=t.official?.[p];
+ const pts=official&&Number.isFinite(+official.pts)?+official.pts:ms.reduce((v,m)=>v+(win(m)===p?(m.pen?2:3):m.pen&&m.penwin?1:0),0);
+ const pointsRate=clamp(pts/(3*ms.length));
+ const goalRate=clamp(.5+(gf-ga)/Math.max(1,ms.length)/10);
+ const winRate=wins/ms.length;
+ const order=rank(t),position=order.indexOf(p);
+ const placeRate=position===0?1:position===1?.5:0;
+ // 0.48: очки; 0.20: голы; 0.17: победы; 0.15: место.
+ const performance=.48*pointsRate+.20*goalRate+.17*winRate+.15*placeRate;
+ // 88 — середина шкалы, сильные чемпионаты поднимаются к 95–98.
+ const score=Math.max(75,Math.min(99,Math.round(79+18*performance)));
+ return {score,pts,gf,ga,wins,played:ms.length,position:position+1,performance};
+}
+function cardMetrics(ts,p){
+ const ms=flat(ts).filter(m=>m.a===p||m.b===p);
+ let wins=0,gf=0,ga=0,tech=0;
+ for(const m of ms){gf+=m.a===p?m.x:m.y;ga+=m.a===p?m.y:m.x;if(win(m)===p)wins++;if(m.technical&&win(m)!==p)tech++;}
+ const n=Math.max(1,ms.length),titles=ts.filter(t=>t.champ===p).length;
+ const grades=ts.map(t=>tournamentGrade(t,p)).filter(Boolean);
+ const avg=grades.length?grades.reduce((v,g)=>v+g.score,0)/grades.length:82;
+ const winRate=wins/n,goalRate=gf/n,conceded=ga/n;
+ return {АТК:clamp100(Math.max(70,Math.min(99,76+goalRate*3.5))),ЗАЩ:clamp100(Math.max(70,Math.min(99,99-conceded*4))),ПОБ:clamp100(75+winRate*23),СТАБ:clamp100(Math.max(70,Math.min(99,100-2*Math.sqrt(grades.reduce((v,g)=>v+(g.score-avg)**2,0)/Math.max(1,grades.length))-tech/n*8))),ТИТ:clamp100(77+22*titles/Math.max(1,ts.length)),wins,gf,ga,played:ms.length,titles,avgGrade:avg};
+}
+function allCardRatings(ts){
+ return Object.fromEntries(['Д','А','Ф'].map(p=>{
+ const x=cardMetrics(ts,p);
+ // ОБЩ: карьера 60%, победы 15%, атака 8%, защита 7%, титулы 10%.
+ const overall=clamp100(.60*x.avgGrade+.15*x.ПОБ+.08*x.АТК+.07*x.ЗАЩ+.10*x.ТИТ);
+ return [p,{...x,overall}];
+ }));
+}
+function formForThree(ts){
+ const x=ts.slice().sort((a,b)=>a.date.localeCompare(b.date)).slice(-3);
+ const result={};
+ for(const p of ['Д','А','Ф']){
+  const grades=x.map(t=>tournamentGrade(t,p)).filter(Boolean);
+  // Последний чемпионат влияет сильнее: веса 20%, 30%, 50%.
+  const weights=[.2,.3,.5].slice(-grades.length),sum=weights.reduce((a,b)=>a+b,0);
+  const score=grades.length?clamp100(grades.reduce((v,g,i)=>v+g.score*weights[i],0)/sum):82;
+  result[p]={score,pts:grades.reduce((v,g)=>v+g.pts,0),played:grades.reduce((v,g)=>v+g.played,0)};
+ }
+ return {result,tours:x};
+}
+function renderRating(){
+ const ts=sortT();
+ const cards=allCardRatings(ts),recent=formForThree(ts),ranked=['Д','А','Ф'].sort((a,b)=>cards[b].overall-cards[a].overall);
+ const last=recent.tours.map(t=>fmt(t)).join(' · ');
+ $('ratingCards').innerHTML=ranked.map((p,i)=>{const x=cards[p],f=recent.result[p],color=i===0?'gold':i===1?'silver':'bronze';return `<div class="fifa-card ${color}"><div class="fifa-top"><span>${['🥇','🥈','🥉'][i]} FIFA НА КУЛИЧКАХ</span><span>${x.titles} 🏆</span></div><div class="fifa-hero"><div class="fifa-ovr"><strong>${x.overall}</strong><span>ОБЩ</span></div><div class="fifa-symbol">${p==='Д'?'735':p==='А'?'27':'22'}</div></div><div class="fifa-name">${p==='Д'?'MUTANT':p==='А'?'АРТЁМ':'ФЕДОС'}</div><div class="fifa-form">⚡ ФОРМА <strong>${f.score}/100</strong><span>Последние 3 турнира</span></div><div class="fifa-attrs">${[['АТК','Атака'],['ЗАЩ','Защита'],['ПОБ','Победы'],['СТАБ','Стабильность'],['ТИТ','Титулы']].map(([k,label])=>`<div title="${label}"><b>${x[k]}</b><span>${k}</span></div>`).join('')}</div><div class="fifa-foot">${x.played} матчей · ${x.gf}:${x.ga} голы</div></div>`}).join('');
+ const lastThree=ts.slice(-3).reverse();
+ $('ratingHistory').innerHTML=`<p class="notice">Последние три чемпионата: ${esc(last)}. Турнирная оценка: слабое выступление ≈82, среднее ≈88, прайм ≈95. Форма — взвешенное среднее трёх последних турниров (20% / 30% / 50%).</p><div class="tablewrap"><table><thead><tr><th>Игрок</th><th>Общий</th><th>Форма</th><th>Очки за 3 турнира</th></tr></thead><tbody>${ranked.map(p=>`<tr><td>${esc(N[p])}</td><td>${cards[p].overall}</td><td>${recent.result[p].score}</td><td>${recent.result[p].pts}</td></tr>`).join('')}</tbody></table></div><h3 class="section">Оценки выступлений по чемпионатам</h3><p class="muted small">Каждый чемпионат получает оценку от 75 до 99. Чемпионство, очки, голы и победы влияют на неё автоматически.</p><div class="tablewrap"><table><thead><tr><th>Чемпионат</th><th>Артём</th><th>MUTANT</th><th>Федос</th></tr></thead><tbody>${ts.slice().reverse().map(t=>`<tr><td>${esc(fmt(t))}</td>${['А','Д','Ф'].map(p=>{const g=tournamentGrade(t,p);return `<td><strong>${g?g.score:'—'}</strong>${g&&g.score>=95?' 🔥':''}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function renderPlayers(){let s=calc(pool());$('playerCards').innerHTML=['Д','А','Ф'].map(p=>{let x=s[p];return `<div class="card"><div class="person"><div class="avatar">${p==='Д'?'735':p==='А'?'27':'22'}</div><div><h2 style="margin:0">${esc(N[p])}</h2><div class="muted small">${p==='Д'?'PLAYERS CLUB · MUTANT':'Участник лиги'}</div></div></div><div class="metric">${x.titles} 🏆</div><div class="section"><strong>🏆 Общий рейтинг: ${allCardRatings(DATA)[p].overall} / 100</strong><div class="progress"><div style="width:${allCardRatings(DATA)[p].overall}%"></div></div></div><div class="muted">Чемпионских титулов</div><div class="section tablewrap"><table><tbody>${[['Матчей',x.played],['Побед',x.w+x.wp],['Побед по пенальти',x.wp],['Поражений по пенальти',x.lp],['Голы',x.gf+':'+x.ga],['Разница',x.gf-x.ga],['Технических поражений',x.technical]].map(([k,v])=>`<tr><td>${k}</td><td class="right">${v}</td></tr>`).join('')}</tbody></table></div></div>`}).join('')}
+function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — не указан победитель пенальти 10:10; 31.05 — у Федоса 20 официальных очков против 10 по матчам; 25.09 — отсутствует один счёт; 28.09 — стартовый штраф −3; 09.06 — пропуск номера тура.</p>`}
+
+const PLAYERS=['Д','А','Ф'];
+const sortT=()=>DATA.slice().sort((a,b)=>a.date.localeCompare(b.date));
+function renderSpecial(){
+ const ts=sortT(),totw=ts.map(t=>({t,p:PLAYERS.slice().sort((a,b)=>(tournamentGrade(t,b)?.score||0)-(tournamentGrade(t,a)?.score||0))[0]}));
+ const best=totw.slice().reverse().slice(0,6);
+ const all=allCardRatings(ts),titles=Object.fromEntries(PLAYERS.map(p=>[p,ts.filter(t=>t.champ===p).length]));
+ $('specialCards').innerHTML=PLAYERS.slice().sort((a,b)=>titles[b]-titles[a]).map(p=>`<div class="special-card iconcard"><div class="tagline">★ ICON · КАРЬЕРА</div><div class="big">${all[p].overall}</div><h3>${esc(N[p])}</h3><strong>${titles[p]} 🏆 · ${all[p].played} матчей</strong><p>АТК ${all[p].АТК} · ЗАЩ ${all[p].ЗАЩ} · ПОБ ${all[p].ПОБ}</p></div>`).join('')+
+ best.map(({t,p})=>`<div class="special-card"><div class="tagline">⚡ TOTW · ${esc(fmt(t))}</div><div class="big">${tournamentGrade(t,p).score}</div><h3>${esc(N[p])}</h3><strong>${esc(t.game==='26'?'FIFA 26':'FC 27')}</strong><p>${tournamentGrade(t,p).pts} очков · ${tournamentGrade(t,p).gf}:${tournamentGrade(t,p).ga} голов</p></div>`).join('');
+ const hall=ts.flatMap(t=>PLAYERS.map(p=>({t,p,g:tournamentGrade(t,p)}))).filter(x=>x.g).sort((a,b)=>b.g.score-a.g.score||b.g.pts-a.g.pts).slice(0,12);
+ $('specialHistory').innerHTML=`<div class="tablewrap"><table><thead><tr><th>#</th><th>Игрок</th><th>Турнир</th><th>Оценка</th></tr></thead><tbody>${hall.map((x,i)=>`<tr><td>${i+1}</td><td>${esc(N[x.p])}</td><td>${esc(fmt(x.t))}</td><td><strong>${x.g.score}</strong>${x.g.score>=95?' 🔥':''}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderRivalry(){
+ const pairs=[['Д','А'],['Д','Ф'],['А','Ф']];let ms=flat(pool());
+ $('rivalryBoard').innerHTML=pairs.map(([a,b])=>{
+ const h=ms.filter(m=>[m.a,m.b].includes(a)&&[m.a,m.b].includes(b));let wa=0,wb=0,ga=0,gb=0,close=0,pen=0;
+ for(const m of h){const w=win(m);if(w===a)wa++;if(w===b)wb++;ga+=m.a===a?m.x:m.y;gb+=m.a===b?m.x:m.y;if(Math.abs(m.x-m.y)<=1)close++;if(m.pen)pen++}
+ const n=h.length,balanced=n?1-Math.abs(wa-wb)/n:0;
+ const intensity=n?Math.round(Math.min(100,25+Math.min(25,n/35*25)+25*balanced+15*close/n+10*pen/n)):0;
+ return `<div class="rivalry-item"><div class="row"><strong>${esc(N[a])} — ${esc(N[b])}</strong><strong>${intensity}/100</strong></div><div class="rivalry-bar"><div style="width:${intensity}%"></div></div><div class="label">${n} матчей · Победы ${wa}:${wb} · Голы ${ga}:${gb} · Пенальти ${pen}</div></div>`;
+ }).join('');
+}
+function renderPrime(){
+ const p=$('primePlayer').value,ts=sortT(),points=ts.map((t,i)=>({i,t,g:tournamentGrade(t,p)})).filter(x=>x.g),w=760,h=290,pl=40,pr=25,pt=22,pb=42;
+ if(!points.length){$('primeChart').textContent='Нет результатов';return}
+ const x=i=>pl+(w-pl-pr)*(points.length===1?.5:i/(points.length-1)),y=v=>pt+(h-pt-pb)*(100-v)/25;
+ const line=points.map((d,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(d.g.score).toFixed(1)}`).join(' ');
+ const ticks=[75,80,85,90,95,100].map(v=>`<line x1="${pl}" y1="${y(v)}" x2="${w-pr}" y2="${y(v)}" stroke="#64748b" stroke-opacity=".25"/><text x="5" y="${y(v)+4}" font-size="12" fill="#a9b6c7">${v}</text>`).join('');
+ const dots=points.map((d,i)=>`<circle cx="${x(i)}" cy="${y(d.g.score)}" r="5" fill="${d.g.score>=95?'#f2c15a':'#7de0ba'}"><title>${esc(fmt(d.t))}: ${d.g.score}</title></circle>`).join('');
+ $('primeChart').innerHTML=`<svg class="prime-svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="График рейтинга игрока по чемпионатам">${ticks}<path d="${line}" fill="none" stroke="#79d8b5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>${dots}<text x="${pl}" y="${h-12}" font-size="12" fill="#a9b6c7">${esc(fmt(points[0].t))}</text><text x="${w-pr}" y="${h-12}" text-anchor="end" font-size="12" fill="#a9b6c7">${esc(fmt(points.at(-1).t))}</text></svg>`;
+ const best=points.slice().sort((a,b)=>b.g.score-a.g.score)[0],worst=points.slice().sort((a,b)=>a.g.score-b.g.score)[0];
+ $('primeSummary').innerHTML=`<div class="mini-grid"><div class="mini"><div class="kpi-label">Прайм</div><strong>${best.g.score}</strong><div class="label">${esc(fmt(best.t))}</div></div><div class="mini"><div class="kpi-label">Последний</div><strong>${points.at(-1).g.score}</strong><div class="label">${esc(fmt(points.at(-1).t))}</div></div><div class="mini"><div class="kpi-label">Минимум</div><strong>${worst.g.score}</strong><div class="label">${esc(fmt(worst.t))}</div></div></div>`;
+}
+let liveDraft=null;
+const liveKey='kulichki_live_draft_v1';
+try{liveDraft=JSON.parse(localStorage.getItem(liveKey)||'null')}catch(e){}
+function saveDraft(){try{localStorage.setItem(liveKey,JSON.stringify(liveDraft))}catch(e){console.warn(e)}}
+function liveNew(){const date=$('liveDate').value||new Date().toISOString().slice(0,10),game=$('liveGame').value,rounds=Math.min(20,Math.max(1,parseInt($('liveRounds').value,10)||7));
+ liveDraft={id:'custom-'+Date.now(),date,game,rounds,matches:[],teams:{}};
+ for(let r=1;r<=rounds;r++)for(const [a,b] of [['А','Ф'],['Д','А'],['Д','Ф']])liveDraft.matches.push({id:liveDraft.id+'-'+r+'-'+a+b,round:r,league:'',a,b,x:null,y:null,pen:null,penwin:null,technical:false,note:'',teams:{}});
+ saveDraft();renderLive();}
+function liveValid(m){return Number.isInteger(m.x)&&Number.isInteger(m.y)&&m.x>=0&&m.y>=0&&(m.x!==m.y||!!m.penwin)}
+function liveStand(){const t={champ:'Д',matches:liveDraft.matches.filter(liveValid),penalties:{}};return tourCalc(t)}
+function liveField(i,key,value){if(!liveDraft||!liveDraft.matches[i])return;const m=liveDraft.matches[i];if(key==='x'||key==='y')m[key]=value===''?null:Math.max(0,Math.min(99,Number(value)));else if(key==='penwin')m.penwin=value||null;else m[key]=value;if(key==='x'||key==='y'){if(m.x!==m.y){m.penwin=null;m.pen=null}}if(key==='penwin')m.pen=m.penwin?'решено':null;saveDraft();renderLive();}
+const LEAGUE_TEAMS={
+ 'АПЛ':['Арсенал','Манчестер Сити','Ливерпуль','Челси','Манчестер Юнайтед','Тоттенхэм','Ньюкасл','Астон Вилла','Брайтон','Борнмут','Вест Хэм','Фулхэм','Кристал Пэлас','Эвертон','Ноттингем Форест','Брентфорд','Вулверхэмптон','Лидс','Бернли','Сандерленд'],
+ 'Ла Лига':['Реал Мадрид','Барселона','Атлетико Мадрид','Атлетик Бильбао','Вильярреал','Бетис','Реал Сосьедад','Севилья','Валенсия','Жирона','Сельта','Осасуна','Хетафе','Райо Вальекано','Мальорка','Алавес','Эспаньол','Эльче','Леванте','Реал Овьедо'],
+ 'Серия А':['Интер','Милан','Ювентус','Наполи','Рома','Лацио','Аталанта','Фиорентина','Болонья','Торино','Комо','Удинезе','Дженоа','Парма','Лечче','Кальяри','Сассуоло','Пиза','Кремонезе','Верона'],
+ 'Бундеслига':['Бавария','Боруссия Дортмунд','Байер','РБ Лейпциг','Айнтрахт Франкфурт','Штутгарт','Вольфсбург','Фрайбург','Майнц','Боруссия Мёнхенгладбах','Хоффенхайм','Вердер','Аугсбург','Унион Берлин','Гамбург','Кёльн','Санкт-Паули','Хайденхайм'],
+ 'Лига 1':['ПСЖ','Марсель','Монако','Лион','Лилль','Ницца','Ланс','Ренн','Страсбур','Брест','Тулуза','Нант','Осер','Гавр','Анже','Лорьян','Мец','Париж'],
+ 'РПЛ':['Зенит','Краснодар','ЦСКА','Спартак Москва','Локомотив Москва','Динамо Москва','Ростов','Рубин','Крылья Советов','Ахмат','Акрон','Оренбург','Пари НН','Балтика','Сочи','Динамо Махачкала'],
+ 'Саудовская лига':['Аль-Наср','Аль-Хиляль','Аль-Иттихад','Аль-Ахли','Аль-Кадисия','Аль-Шабаб','Аль-Иттифак','Аль-Фатех','Аль-Таавун','Дамак','Аль-Фейха','Аль-Халидж','Аль-Раед','Аль-Охдуд','Аль-Вехда'],
+ 'Турецкая Суперлига':['Галатасарай','Фенербахче','Бешикташ','Трабзонспор','Истанбул Башакшехир','Самсунспор','Гёзтепе','Касымпаша','Антальяспор','Коньяспор','Ризеспор','Аланьяспор','Кайсериспор','Газиантеп'],
+ 'Примейра-лига':['Бенфика','Порту','Спортинг','Брага','Витория Гимарайнш','Фамаликан','Эшторил','Боавишта','Жил Висенте','Риу Аве','Морейренсе','Санта-Клара'],
+ 'Эредивизи':['Аякс','ПСВ','Фейеноорд','АЗ Алкмар','Твенте','Утрехт','Гоу Эхед Иглс','Херенвен','Спарта Роттердам','Гронинген','НЕК','Фортуна Ситтард'],
+ 'MLS':['Интер Майами','Лос-Анджелес ФК','Лос-Анджелес Гэлакси','Нью-Йорк Сити','Нью-Йорк Ред Буллз','Атланта Юнайтед','Сиэтл Саундерс','Коламбус Крю','Цинциннати','Орландо Сити','Портленд Тимберс'],
+ 'Сборные':['Аргентина','Франция','Испания','Англия','Германия','Португалия','Бразилия','Нидерланды','Италия','Бельгия','Хорватия','Уругвай','Марокко','Турция','Саудовская Аравия','Япония','США','Мексика','Россия']
+};
+const LEAGUE_ALIASES={'апл':'АПЛ','премьер лига':'АПЛ','premier league':'АПЛ','англия':'АПЛ','ла лига':'Ла Лига','испания':'Ла Лига','laliga':'Ла Лига','серия а':'Серия А','италия':'Серия А','бундеслига':'Бундеслига','германия':'Бундеслига','лига 1':'Лига 1','франция':'Лига 1','рпл':'РПЛ','россия':'РПЛ','саудовская':'Саудовская лига','саудовская лига':'Саудовская лига','турция':'Турецкая Суперлига','суперлига':'Турецкая Суперлига','португалия':'Примейра-лига','нидерланды':'Эредивизи','голландия':'Эредивизи','сша':'MLS','млс':'MLS','сборные':'Сборные'};
+function leagueName(raw){let v=(raw||'').trim();return LEAGUE_ALIASES[v.toLowerCase()]||Object.keys(LEAGUE_TEAMS).find(k=>k.toLowerCase()===v.toLowerCase())||v}
+function liveRoundTeams(round){let out={};for(const m of liveDraft.matches.filter(m=>m.round===round))for(const p of PLAYERS)if(m.teams&&m.teams[p])out[p]=m.teams[p];return out}
+function liveSetLeague(round,value){const league=leagueName(value);for(const m of liveDraft.matches.filter(m=>m.round===round)){m.league=league;m.teams={}}saveDraft();renderLive()}
+function liveSetTeam(round,player,value){for(const m of liveDraft.matches.filter(m=>m.round===round)){m.teams=m.teams||{};m.teams[player]=value}saveDraft();renderLive()}
+function teamPicker(round,p,teams,selected){const custom=selected&&!teams.includes(selected);return `<label class="live-team-label">${esc(N[p])}<select data-teamround="${round}" data-teamplayer="${p}"><option value="">Выбрать клуб</option>${teams.map(t=>`<option value="${esc(t)}" ${selected===t?'selected':''}>${esc(t)}</option>`).join('')}<option value="__custom__" ${custom?'selected':''}>✏️ Другая команда…</option></select></label>${custom?`<label class="live-team-label">Название команды <input data-customround="${round}" data-customplayer="${p}" value="${esc(selected)}" placeholder="Введи название"></label>`:''}`}
+function renderLive(){const box=$('liveEditor');
+ if(!liveDraft){box.innerHTML='<p class="notice">Нажми «Создать турнир», чтобы начать. Старые чемпионаты останутся без изменений.</p>'}else{
+ const ms=liveDraft.matches,complete=ms.filter(liveValid).length,stand=liveStand();
+ box.innerHTML=`<h3>${esc(liveDraft.date)} · ${liveDraft.game==='26'?'FIFA 26':'FC 27'} · ${complete}/${ms.length} матчей</h3><div class="tablewrap"><table><thead><tr><th>Игрок</th><th>Очки</th><th>Голы</th><th>РМ</th></tr></thead><tbody>${stand.map(q=>`<tr><td>${esc(N[q.p])}</td><td>${q.pts}</td><td>${q.gf}:${q.ga}</td><td>${q.gf-q.ga}</td></tr>`).join('')}</tbody></table></div>`+
+ Array.from({length:liveDraft.rounds},(_,r)=>{const round=r+1,rm=ms.filter(m=>m.round===round),league=leagueName(rm[0]?.league||''),known=LEAGUE_TEAMS[league]||[],customLeague=league&&!known.length,selected=liveRoundTeams(round);return `<div class="live-round"><h3>Тур ${round}</h3><div class="live-team-panel"><label>Лига тура<select data-liveround="${round}"><option value="">Выбрать лигу</option>${Object.keys(LEAGUE_TEAMS).map(k=>`<option value="${esc(k)}" ${league===k?'selected':''}>${esc(k)}</option>`).join('')}<option value="__custom__" ${customLeague?'selected':''}>✏️ Своя лига / тема…</option></select></label>${customLeague?`<label>Своя лига <input data-customleague="${round}" value="${esc(league)}" placeholder="Например, Лига чемпионов"></label>`:''}<div class="live-team-grid">${PLAYERS.map(p=>teamPicker(round,p,known,selected[p]||'')).join('')}</div><div class="smallnote">Команда назначается игроку на весь тур и автоматически подставляется во все три матча. Список клубов встроен и доступен без интернета; составы могут отличаться от актуальных в игре.</div></div>${ms.map((m,i)=>m.round===round?`<div class="live-match"><div class="toolbar"><strong>${esc(N[m.a])}<span class="team-under">${esc(m.teams?.[m.a]||'Команда не выбрана')}</span></strong><input aria-label="Голы ${esc(N[m.a])}" type="number" min="0" max="99" data-liveindex="${i}" data-livekey="x" value="${m.x??''}" placeholder="—"><strong>:</strong><input aria-label="Голы ${esc(N[m.b])}" type="number" min="0" max="99" data-liveindex="${i}" data-livekey="y" value="${m.y??''}" placeholder="—"><strong>${esc(N[m.b])}<span class="team-under">${esc(m.teams?.[m.b]||'Команда не выбрана')}</span></strong></div>${m.x!==null&&m.y!==null&&m.x===m.y?`<label>Победитель по пенальти <select data-liveindex="${i}" data-livekey="penwin"><option value="">Не выбран</option><option value="${m.a}" ${m.penwin===m.a?'selected':''}>${esc(N[m.a])}</option><option value="${m.b}" ${m.penwin===m.b?'selected':''}>${esc(N[m.b])}</option></select></label>`:''}</div>`:'').join('')}</div>`}).join('')+
+ `<div class="split section"><button class="btn primary" id="liveFinish" ${complete!==ms.length?'disabled':''}>Завершить и сохранить в архив</button><button class="btn" id="liveReset">Отменить черновик</button></div><p class="smallnote">Для завершения нужны все ${ms.length} результатов и победители всех ничьих по пенальти. Изменения сохраняются на этом устройстве.</p>`;
+ }
+ const custom=DATA.filter(t=>t.id.startsWith('custom-'));
+ $('liveSaved').innerHTML=custom.length?`<h3>Мои сохранённые чемпионаты (${custom.length})</h3>`+custom.map(t=>`<div class="entry row"><div><strong>${esc(fmt(t))}</strong> · 🏆 ${esc(N[t.champ])}<div class="label">${t.matches.length} матчей</div></div><button class="btn" data-tour="${esc(t.id)}">Открыть</button></div>`).join(''):'';
+}
+function liveFinish(){if(!liveDraft||liveDraft.matches.some(m=>!liveValid(m)))return alert('Заполни все матчи и серии пенальти');
+ const stand=liveStand(),champ=stand[0].p;
+ const t={...liveDraft,champ,official:Object.fromEntries(stand.map(q=>[q.p,{pts:q.pts,gf:q.gf,ga:q.ga}])),note:'Добавлено вручную через LIVE-турнир'};
+ DATA.push(t);try{localStorage.setItem('kulichki_tournaments_v1',JSON.stringify(DATA.filter(x=>x.id.startsWith('custom-'))))}catch(e){alert('Не удалось сохранить турнир: проверь память браузера');DATA.pop();return}
+ liveDraft=null;try{localStorage.removeItem(liveKey)}catch(e){}selected=t.id;game='all';tab='archive';render();alert('Чемпионат добавлен в архив!');}
+
+function render(){
+ document.querySelectorAll('[data-game]').forEach(b=>b.classList.toggle('active',b.dataset.game===game));
+ document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-selected',String(b.dataset.tab===tab));});
+ document.querySelectorAll('main>section').forEach(s=>{s.classList.toggle('hidden',s.id!==tab);s.hidden=s.id!==tab;});
+ for(const fn of [renderOverview,renderArchive,renderMatches,renderH2H,renderPlayers,renderRating,renderIssues,renderSpecial,renderRivalry,renderPrime,renderLive]){try{fn()}catch(err){console.error('PS Championship rendering error',fn.name,err)}}
+}
+
+function download(name,content,type){let url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}document.addEventListener('click',e=>{let g=e.target.closest('[data-game]');if(g){game=g.dataset.game;limit=80;render()}let n=e.target.closest('[data-tab]');if(n){tab=n.dataset.tab;render()}let t=e.target.closest('[data-tour]');if(t){game='all';selected=t.dataset.tour;tab='archive';render();window.scrollTo({top:0,behavior:'smooth'})}});document.querySelectorAll('[data-tab],[data-game]').forEach(btn=>{
+ btn.style.cursor='pointer';btn.style.touchAction='manipulation';
+ btn.addEventListener('click',function(e){
+  e.stopPropagation();
+  if(this.dataset.tab){tab=this.dataset.tab;}else{game=this.dataset.game;limit=80;}
+  render();
+ });
+});
+$('primePlayer').addEventListener('change',renderPrime);
+$('liveDate').value=new Date().toISOString().slice(0,10);
+$('liveStart').addEventListener('click',liveNew);
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.liveindex!==undefined){liveField(Number(t.dataset.liveindex),t.dataset.livekey,t.value)}else if(t.dataset.liveround&&liveDraft){if(t.value==='__custom__'){liveSetLeague(Number(t.dataset.liveround),'Другая лига')}else liveSetLeague(Number(t.dataset.liveround),t.value)}else if(t.dataset.customleague&&liveDraft){liveSetLeague(Number(t.dataset.customleague),t.value)}else if(t.dataset.teamround&&liveDraft){if(t.value==='__custom__')liveSetTeam(Number(t.dataset.teamround),t.dataset.teamplayer,'Другая команда');else liveSetTeam(Number(t.dataset.teamround),t.dataset.teamplayer,t.value)}else if(t.dataset.customround&&liveDraft){liveSetTeam(Number(t.dataset.customround),t.dataset.customplayer,t.value)}});
+document.addEventListener('click',e=>{if(e.target.id==='liveFinish')liveFinish();if(e.target.id==='liveReset'&&confirm('Удалить текущий черновик?')){liveDraft=null;localStorage.removeItem(liveKey);renderLive()}});
+$('tourSelect').addEventListener('change' ,e=>{selected=e.target.value;renderArchive()});$('mode').addEventListener('change',renderArchive);for(const id of ['matchTour','matchPlayer','matchSearch'])$(id).addEventListener(id==='matchSearch'?'input':'change',()=>{limit=80;renderMatches()});$('more').addEventListener('click',()=>{limit+=80;renderMatches()});for(const id of ['h1','h2'])$(id).addEventListener('change',renderH2H);$('export').addEventListener('click',()=>download('ps-championship-full-archive.json',JSON.stringify(DATA,null,2),'application/json'));$('csv').addEventListener('click',()=>{let header=['Турнир','Игра','Дата','Тур','Лига','Игрок 1','Команда 1','Голы 1','Игрок 2','Команда 2','Голы 2','Пенальти','Победитель пенальти','Технический','Примечание'];let rows=flat(DATA).map(m=>[m.tour,m.game,m.date,m.round,m.league,N[m.a],m.teams[m.a]||'',m.x,N[m.b],m.teams[m.b]||'',m.y,m.pen||'',m.penwin?N[m.penwin]:'',m.technical?'Да':'Нет',m.note]);let csv=[header,...rows].map(row=>row.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');download('ps-championship-matches.csv','\ufeff'+csv,'text/csv;charset=utf-8')});render();</script></body></html>
