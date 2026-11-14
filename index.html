@@ -7334,13 +7334,17 @@ function renderLive(){const box=$('liveEditor');
  `<div class="split section"><button class="btn primary" id="liveFinish" ${complete!==ms.length?'disabled':''}>Завершить и сохранить в архив</button><button class="btn" id="liveReset">Отменить черновик</button></div><p class="smallnote">Для завершения нужны все ${ms.length} результатов и победители всех ничьих по пенальти. Изменения сохраняются на этом устройстве.</p>`;
  }
  const custom=DATA.filter(t=>t.id.startsWith('custom-'));
- $('liveSaved').innerHTML=custom.length?`<h3>Мои сохранённые чемпионаты (${custom.length})</h3>`+custom.map(t=>`<div class="entry row"><div><strong>${esc(fmt(t))}</strong> · 🏆 ${esc(N[t.champ])}<div class="label">${t.matches.length} матчей</div></div><button class="btn" data-tour="${esc(t.id)}">Открыть</button></div>`).join(''):'';
+ $('liveSaved').innerHTML=custom.length?`<h3>Мои сохранённые чемпионаты (${custom.length})</h3>`+custom.map(t=>`<div class="entry row"><div><strong>${esc(fmt(t))}</strong> · 🏆 ${esc(N[t.champ])}<div class="label">${t.matches.length} матчей</div></div><button class="btn" data-tour="${esc(t.id)}">Открыть</button><button class="btn" data-export-tour="${esc(t.id)}">Скачать итоги</button></div>`).join(''):'';
+}
+function liveExport(t){
+ const filename = 'fifa-na-kulichkah-'+t.date+'.json';
+ download(filename,JSON.stringify(t,null,2),'application/json;charset=utf-8');
 }
 function liveFinish(){if(!liveDraft||liveDraft.matches.some(m=>!liveValid(m)))return alert('Заполни все матчи и серии пенальти');
  const stand=liveStand(),champ=stand[0].p;
  const t={...liveDraft,champ,official:Object.fromEntries(stand.map(q=>[q.p,{pts:q.pts,gf:q.gf,ga:q.ga}])),note:'Добавлено вручную через LIVE-турнир'};
  DATA.push(t);try{localStorage.setItem('kulichki_tournaments_v1',JSON.stringify(DATA.filter(x=>x.id.startsWith('custom-'))))}catch(e){alert('Не удалось сохранить турнир: проверь память браузера');DATA.pop();return}
- liveDraft=null;try{localStorage.removeItem(liveKey)}catch(e){}selected=t.id;game='all';tab='archive';render();alert('Чемпионат добавлен в архив!');}
+ liveDraft=null;try{localStorage.removeItem(liveKey)}catch(e){}selected=t.id;game='all';tab='archive';render();alert('Чемпионат сохранён в этом браузере. Скачать итоги можно во вкладке LIVE-турнир.');}
 
 function render(){
  document.querySelectorAll('[data-game]').forEach(b=>b.classList.toggle('active',b.dataset.game===game));
@@ -7364,5 +7368,5 @@ $('primePlayer').addEventListener('change',renderPrime);
 $('liveDate').value=new Date().toISOString().slice(0,10);
 $('liveStart').addEventListener('click',liveNew);
 document.addEventListener('change',e=>{const t=e.target;if(t.dataset.liveindex!==undefined){liveField(Number(t.dataset.liveindex),t.dataset.livekey,t.value)}else if(t.dataset.liveround&&liveDraft){if(t.value==='__custom__'){liveSetLeague(Number(t.dataset.liveround),'Другая лига')}else liveSetLeague(Number(t.dataset.liveround),t.value)}else if(t.dataset.customleague&&liveDraft){liveSetLeague(Number(t.dataset.customleague),t.value)}else if(t.dataset.teamround&&liveDraft){if(t.value==='__custom__')liveSetTeam(Number(t.dataset.teamround),t.dataset.teamplayer,'Другая команда');else liveSetTeam(Number(t.dataset.teamround),t.dataset.teamplayer,t.value)}else if(t.dataset.customround&&liveDraft){liveSetTeam(Number(t.dataset.customround),t.dataset.customplayer,t.value)}});
-document.addEventListener('click',e=>{if(e.target.id==='liveFinish')liveFinish();if(e.target.id==='liveReset'&&confirm('Удалить текущий черновик?')){liveDraft=null;localStorage.removeItem(liveKey);renderLive()}});
+document.addEventListener('click',e=>{const exportButton=e.target.closest('[data-export-tour]');if(exportButton){const t=DATA.find(t=>t.id===exportButton.dataset.exportTour&&t.id.startsWith('custom-'));if(t)liveExport(t);return}if(e.target.id==='liveFinish')liveFinish();if(e.target.id==='liveReset'&&confirm('Удалить текущий черновик?')){liveDraft=null;localStorage.removeItem(liveKey);renderLive()}});
 $('tourSelect').addEventListener('change' ,e=>{selected=e.target.value;renderArchive()});$('mode').addEventListener('change',renderArchive);for(const id of ['matchTour','matchPlayer','matchSearch'])$(id).addEventListener(id==='matchSearch'?'input':'change',()=>{limit=80;renderMatches()});$('more').addEventListener('click',()=>{limit+=80;renderMatches()});for(const id of ['h1','h2'])$(id).addEventListener('change',renderH2H);$('export').addEventListener('click',()=>download('ps-championship-full-archive.json',JSON.stringify(DATA,null,2),'application/json'));$('csv').addEventListener('click',()=>{let header=['Турнир','Игра','Дата','Тур','Лига','Игрок 1','Команда 1','Голы 1','Игрок 2','Команда 2','Голы 2','Пенальти','Победитель пенальти','Технический','Примечание'];let rows=flat(DATA).map(m=>[m.tour,m.game,m.date,m.round,m.league,N[m.a],m.teams[m.a]||'',m.x,N[m.b],m.teams[m.b]||'',m.y,m.pen||'',m.penwin?N[m.penwin]:'',m.technical?'Да':'Нет',m.note]);let csv=[header,...rows].map(row=>row.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');download('ps-championship-matches.csv','\ufeff'+csv,'text/csv;charset=utf-8')});render();</script></body></html>
