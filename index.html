@@ -3273,7 +3273,7 @@
       {
         "id": "jun09-16",
         "round": 6,
-        "league": "Лига Турции (тур 7)",
+        "league": "Лига Турции",
         "a": "Ф",
         "b": "А",
         "x": 4,
@@ -3291,7 +3291,7 @@
       {
         "id": "jun09-17",
         "round": 6,
-        "league": "Лига Турции (тур 7)",
+        "league": "Лига Турции",
         "a": "Д",
         "b": "Ф",
         "x": 5,
@@ -3309,7 +3309,7 @@
       {
         "id": "jun09-18",
         "round": 6,
-        "league": "Лига Турции (тур 7)",
+        "league": "Лига Турции",
         "a": "А",
         "b": "Д",
         "x": 3,
@@ -3327,7 +3327,7 @@
       {
         "id": "jun09-19",
         "round": 7,
-        "league": "Сборные (тур 8)",
+        "league": "Сборные",
         "a": "Ф",
         "b": "А",
         "x": 4,
@@ -3345,7 +3345,7 @@
       {
         "id": "jun09-20",
         "round": 7,
-        "league": "Сборные (тур 8)",
+        "league": "Сборные",
         "a": "Д",
         "b": "Ф",
         "x": 5,
@@ -3363,7 +3363,7 @@
       {
         "id": "jun09-21",
         "round": 7,
-        "league": "Сборные (тур 8)",
+        "league": "Сборные",
         "a": "А",
         "b": "Д",
         "x": 6,
@@ -3379,17 +3379,8 @@
         }
       }
     ],
-    "note": "В исходной записи после 5-го тура идут 7-й и 8-й. Данных за 6-й тур нет.",
-    "yearUncertain": false,
-    "sourceRounds": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      7,
-      8
-    ]
+    "note": "",
+    "yearUncertain": false
   },
   {
     "id": "jun18",
@@ -7250,7 +7241,7 @@ function renderRating(){
  $('ratingHistory').innerHTML=`<p class="notice">Последние три чемпионата: ${esc(last)}. Турнирная оценка: слабое выступление ≈82, среднее ≈88, прайм ≈95. Форма — взвешенное среднее трёх последних турниров (20% / 30% / 50%).</p><div class="tablewrap"><table><thead><tr><th>Игрок</th><th>Общий</th><th>Форма</th><th>Очки за 3 турнира</th></tr></thead><tbody>${ranked.map(p=>`<tr><td>${esc(N[p])}</td><td>${cards[p].overall}</td><td>${recent.result[p].score}</td><td>${recent.result[p].pts}</td></tr>`).join('')}</tbody></table></div><h3 class="section">Оценки выступлений по чемпионатам</h3><p class="muted small">Каждый чемпионат получает оценку от 75 до 99. Чемпионство, очки, голы и победы влияют на неё автоматически.</p><div class="tablewrap"><table><thead><tr><th>Чемпионат</th><th>Артём</th><th>MUTANT</th><th>Федос</th></tr></thead><tbody>${ts.slice().reverse().map(t=>`<tr><td>${esc(fmt(t))}</td>${['А','Д','Ф'].map(p=>{const g=tournamentGrade(t,p);return `<td><strong>${g?g.score:'—'}</strong>${g&&g.score>=95?' 🔥':''}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 function renderPlayers(){let s=calc(pool());$('playerCards').innerHTML=['Д','А','Ф'].map(p=>{let x=s[p];return `<div class="card"><div class="person"><div class="avatar">${p==='Д'?'735':p==='А'?'27':'22'}</div><div><h2 style="margin:0">${esc(N[p])}</h2><div class="muted small">${p==='Д'?'PLAYERS CLUB · MUTANT':'Участник лиги'}</div></div></div><div class="metric">${x.titles} 🏆</div><div class="section"><strong>🏆 Общий рейтинг: ${allCardRatings(DATA)[p].overall} / 100</strong><div class="progress"><div style="width:${allCardRatings(DATA)[p].overall}%"></div></div></div><div class="muted">Чемпионских титулов</div><div class="section tablewrap"><table><tbody>${[['Матчей',x.played],['Побед',x.w+x.wp],['Побед по пенальти',x.wp],['Поражений по пенальти',x.lp],['Голы',x.gf+':'+x.ga],['Разница',x.gf-x.ga],['Технических поражений',x.technical]].map(([k,v])=>`<tr><td>${k}</td><td class="right">${v}</td></tr>`).join('')}</tbody></table></div></div>`}).join('')}
-function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 09.06 — в записи после 5-го тура идут 7-й и 8-й; 25.09 — отсутствует счёт матча Данил — Артём; 28.09 — учтён стартовый штраф Данила −3.</p>`}
+function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 25.09 — отсутствует счёт матча Данил — Артём; 28.09 — учтён стартовый штраф Данила −3.</p>`}
 
 const PLAYERS=['Д','А','Ф'];
 const sortT=()=>DATA.slice().sort((a,b)=>a.date.localeCompare(b.date));
