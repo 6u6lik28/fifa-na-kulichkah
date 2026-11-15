@@ -4283,7 +4283,7 @@
     "champ": "А",
     "official": {
       "А": {
-        "pts": 24,
+        "pts": 26,
         "gf": 47,
         "ga": 36
       },
@@ -4293,7 +4293,7 @@
         "ga": 40
       },
       "Д": {
-        "pts": 6,
+        "pts": 7,
         "gf": 29,
         "ga": 55
       }
@@ -4614,19 +4614,18 @@
         "b": "А",
         "x": 0,
         "y": 0,
-        "pen": null,
-        "penwin": null,
+        "pen": "решено",
+        "penwin": "А",
         "technical": false,
-        "note": "Матч не сыгран. Записан счёт 0:0, очки не начислены.",
+        "note": "Результат внесён по договорённости.",
         "teams": {
           "Д": "Интер Майами",
           "А": "Лос-Анджелес",
           "Ф": "Орландо"
-        },
-        "unplayed": true
+        }
       }
     ],
-    "note": "Данил — Артём, 6-й тур: 0:0 без начисления очков. Матч не сыгран.",
+    "note": "Данил — Артём, 6-й тур: 0:0, победа Артёма по пенальти по договорённости.",
     "yearUncertain": false
   },
   {
@@ -7173,7 +7172,7 @@ function liveTitleScenarios(matches, stand) {
 }
 
 function tableOfficial(t){return `<table><thead><tr><th>#</th><th>Игрок</th><th>Очки</th><th>Голы</th><th>РМ</th></tr></thead><tbody>${rank(t).map((x,i)=>`<tr><td class="${i===0?'winner':''}">${i+1}</td><td class="${i===0?'winner':''}">${esc(N[x.p])}${i===0?' 🏆':''}</td><td>${x.pts}</td><td>${x.gf}:${x.ga}</td><td>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td></tr>`).join('')}</tbody></table>`}function tableComputed(t){return `<table><thead><tr><th>#</th><th>Игрок</th><th>Очки</th><th>Голы</th><th>РМ</th><th>И</th></tr></thead><tbody>${tourCalc(t).map((x,i)=>`<tr><td>${i+1}</td><td>${esc(N[x.p])}</td><td>${x.pts}${x.unknown?'*':''}</td><td>${x.gf}:${x.ga}</td><td>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td><td>${x.played}</td></tr>`).join('')}</tbody></table>`}function mismatch(t){const c=calc([t]);return Object.keys(t.official).filter(p=>{let a=t.official[p],b=c[p];return a.pts!==b.pts||a.gf!==b.gf||a.ga!==b.ga}).length}function renderArchive(){let ts=pool(),id=selected||$('tourSelect').value;if(!ts.some(t=>t.id===id))id=ts.at(-1)?.id;selected=id;$('tourSelect').innerHTML=ts.slice().reverse().map(t=>`<option value="${t.id}" ${t.id===id?'selected':''}>${fmt(t)} · ${t.game==='26'?'FIFA 26':'FC 27'}</option>`).join('');$('archiveCount').textContent=ts.length+' чемпионатов';const t=ts.find(t=>t.id===id);if(!t){$('tourDetail').innerHTML='Нет данных';return}const m=mismatch(t);$('tourDetail').innerHTML=`<div class="row"><div><div class="eyebrow">${t.game==='26'?'FIFA 26':'FC 27'} · ${fmt(t)}</div><h2 style="margin:10px 0">🏆 ${esc(N[t.champ])}</h2><div class="label">${t.rounds} туров · ${t.matches.length} матчей</div></div><span class="tag ${m?'warn':'good'}">${m?'Есть расхождения':'Данные совпадают'}</span></div><div class="tablewrap section">${$('mode').value==='official'?tableOfficial(t):tableComputed(t)}</div><div class="toolbar section"><button class="btn" data-export-tour="${esc(t.id)}">Скачать итоги</button></div>${m?`<p class="notice">Официальная таблица отличается от пересчёта по матчам у ${m} игроков. Исходные значения не изменены.</p>`:''}${t.note?`<p class="notice">📝 ${esc(t.note)}</p>`:''}${t.penalties?`<p class="notice">⚖️ Дисциплинарный штраф: Данил −3 очка до первого тура.</p>`:''}${titleRace(t,m)}<div class="detail"><h3>Туры и результаты</h3>${Array.from({length:t.rounds},(_,i)=>{let ms=t.matches.filter(m=>m.round===i+1),head=ms[0];return `<div class="roundhead">${roundLabel(t,i+1)}-й тур · ${esc(head?.league||'')}</div>${head&&Object.keys(head.teams).length?`<div class="roundteams">${Object.entries(head.teams).map(([p,team])=>`${esc(N[p])}: ${esc(team)}`).join(' · ')}</div>`:''}${ms.map(m=>matchLine({...m,round:roundLabel(t,m.round)})).join('')}`}).join('')}</div>`;$('tourList').innerHTML=ts.slice().reverse().map(x=>`<div class="entry row"><div><strong>${fmt(x)}</strong> <span class="tag">${x.game==='26'?'FIFA 26':'FC 27'}</span><div class="label">🏆 ${esc(N[x.champ])} · ${x.official[x.champ].pts} очков · ${x.matches.length} матчей</div></div><button class="btn" data-tour="${x.id}">Смотреть</button></div>`).join('')}
-function matchLine(m){let tag=m.unplayed?'<span class="tag">Не сыгран</span>':m.agreedDraw?'<span class="tag">Боевая ничья · по 1 очку</span>':m.technical?'<span class="tag warn">Технический</span>':m.pen?`<span class="tag">${m.pen==='?'?'Пенальти: ?':'Пенальти '+esc(m.pen)}</span>`:'';return `<div class="entry row"><div><strong>${esc(N[m.a])}</strong> <span class="muted">—</span> <strong>${esc(N[m.b])}</strong><div class="label">${esc(m.tourName||'')} · Тур ${m.round} · ${esc(m.league)}${m.teams?.[m.a]?' · '+esc(m.teams[m.a])+' / '+esc(m.teams[m.b]||''):''}</div>${m.note?`<div class="label">📝 ${esc(m.note)}</div>`:''}</div><div class="right"><div class="score">${m.x}:${m.y}</div>${tag}</div></div>`}
+function matchLine(m){let tag=m.unplayed?'<span class="tag">Не сыгран</span>':m.agreedDraw?'<span class="tag">Боевая ничья · по 1 очку</span>':m.technical?'<span class="tag warn">Технический</span>':m.pen?`<span class="tag">${m.pen==='решено'&&m.penwin?'По пенальти: '+esc(N[m.penwin]):m.pen==='?'?'Пенальти: ?':'Пенальти '+esc(m.pen)}</span>`:'';return `<div class="entry row"><div><strong>${esc(N[m.a])}</strong> <span class="muted">—</span> <strong>${esc(N[m.b])}</strong><div class="label">${esc(m.tourName||'')} · Тур ${m.round} · ${esc(m.league)}${m.teams?.[m.a]?' · '+esc(m.teams[m.a])+' / '+esc(m.teams[m.b]||''):''}</div>${m.note?`<div class="label">📝 ${esc(m.note)}</div>`:''}</div><div class="right"><div class="score">${m.x}:${m.y}</div>${tag}</div></div>`}
 function renderMatches(){let ts=pool(),selectedTour=$('matchTour').value;let options='<option value="all">Все чемпионаты</option>'+ts.slice().reverse().map(t=>`<option value="${t.id}">${fmt(t)}</option>`).join('');$('matchTour').innerHTML=options;if(ts.some(t=>t.id===selectedTour))$('matchTour').value=selectedTour;let ms=flat(ts).reverse().filter(m=>($('matchTour').value==='all'||m.tour===$('matchTour').value)&&($('matchPlayer').value==='all'||[m.a,m.b].includes($('matchPlayer').value)));let q=$('matchSearch').value.trim().toLowerCase();if(q)ms=ms.filter(m=>[m.league,m.teams[m.a],m.teams[m.b],m.x+':'+m.y,N[m.a],N[m.b],m.note,m.tourName].join(' ').toLowerCase().includes(q));$('matchCount').textContent=ms.length+' матчей';$('matchList').innerHTML=ms.slice(0,limit).map(matchLine).join('')||'<p class="muted">Матчи не найдены</p>';$('more').classList.toggle('hidden',ms.length<=limit)}
 function renderH2H(){let a=$('h1').value,b=$('h2').value;if(a===b){$('h2hResult').innerHTML='<p class="notice">Выбери двух разных игроков.</p>';return}let ms=flat(pool()).filter(m=>[m.a,m.b].includes(a)&&[m.a,m.b].includes(b));let w1=0,w2=0,g1=0,g2=0,p1=0,p2=0,draws=0,unknown=0;for(let m of ms){g1+=m.a===a?m.x:m.y;g2+=m.a===b?m.x:m.y;let w=win(m);if(w===a){w1++;if(m.pen)p1++}else if(w===b){w2++;if(m.pen)p2++}else if(m.agreedDraw)draws++;else if(!m.unplayed)unknown++}$('h2hResult').innerHTML=`<div class="mini-grid"><div class="mini"><div class="kpi-label">${esc(N[a])} · Победы</div><strong>${w1}</strong></div><div class="mini"><div class="kpi-label">Матчей</div><strong>${ms.length}</strong></div><div class="mini"><div class="kpi-label">${esc(N[b])} · Победы</div><strong>${w2}</strong></div></div><div class="section"><h3>Голы: ${g1}:${g2}</h3><p class="notice">Победы по пенальти: ${p1}:${p2}. ${draws?'Ничьих: '+draws+'.':''} ${unknown?`Без известного победителя: ${unknown}.`:''} Матч 08.10 (6:4) официально относится к Данилу и Артёму.</p></div><h3 class="section">Последние личные встречи</h3>${ms.slice(-12).reverse().map(matchLine).join('')}`}
 // Независимые рейтинги для FIFA 26, FC 27 и общей истории.
@@ -7287,7 +7286,7 @@ function renderClubs() {
   const rows = clubStats(flat(pool()),player,$("clubSort").value).filter(row=>row.name.toLocaleLowerCase('ru').replaceAll('ё','е').includes(query));
   $('clubRows').innerHTML = rows.length ? rows.map(row=>'<tr><th scope="row">'+esc(row.name)+'</th><td>'+row.picks.size+'</td><td>'+row.played+'</td><td>'+row.wins+'</td><td>'+Math.round(100*row.wins/row.played)+'%</td><td>'+row.gf+':'+row.ga+'</td></tr>').join('') : '<tr><td colspan="6">Команды не найдены</td></tr>';
 }
-function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 25.09 — несыгранный матч Данил — Артём записан как 0:0 без очков; 28.09 — учтён стартовый штраф Данила −3.</p>`}
+function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 28.09 — учтён стартовый штраф Данила −3.</p>`}
 
 const PLAYERS=['Д','А','Ф'];
 const sortT=()=>DATA.slice().sort((a,b)=>a.date.localeCompare(b.date));
