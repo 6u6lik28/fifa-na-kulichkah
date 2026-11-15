@@ -1513,13 +1513,13 @@
       },
       "Д": {
         "pts": 26,
-        "gf": 54,
-        "ga": 55
+        "gf": 45,
+        "ga": 46
       },
       "Ф": {
         "pts": 16,
-        "gf": 57,
-        "ga": 71
+        "gf": 48,
+        "ga": 62
       }
     },
     "rounds": 8,
@@ -1852,8 +1852,8 @@
         "league": "Саудовская Аравия",
         "a": "Д",
         "b": "Ф",
-        "x": 10,
-        "y": 10,
+        "x": 1,
+        "y": 1,
         "pen": null,
         "penwin": null,
         "technical": false,
@@ -1862,7 +1862,7 @@
         "agreedDraw": true
       }
     ],
-    "note": "10:10 в 8-м туре — боевая ничья. Данилу и Федосу присудили по одному очку.",
+    "note": "1:1 в 8-м туре — боевая ничья. Данилу и Федосу присудили по одному очку.",
     "yearUncertain": false
   },
   {
@@ -7327,7 +7327,7 @@ function renderRecords() {
     +card('Серия побед',streak?streak.length+' подряд':'',details(runs,r=>'<strong>'+esc(N[r.p])+'</strong><p class="muted">'+esc(r.start.tourName)+' · тур '+r.start.round+' → '+esc(r.end.tourName)+' · тур '+r.end.round+'</p>'+button(r.start.tour,r.start.tour===r.end.tour?'Открыть турнир':'Начало серии')+(r.start.tour===r.end.tour?'':' '+button(r.end.tour,'Конец серии'))))
     +card('Самое большое отыгранное отставание',comeback?comeback.gap+' очков':'',details(comebacks,r=>'<strong>'+esc(N[r.t.champ])+'</strong><p class="muted">'+esc(fmt(r.t))+' · отставание после '+r.round+'-го тура</p>'+button(r.t.id)));
 }
-function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 28.09 — учтён стартовый штраф Данила −3.</p>`}
+function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 1:1, по одному очку; 28.09 — учтён стартовый штраф Данила −3.</p>`}
 
 const PLAYERS=['Д','А','Ф'];
 const sortT=()=>DATA.slice().sort((a,b)=>a.date.localeCompare(b.date));
