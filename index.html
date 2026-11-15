@@ -29,7 +29,7 @@
 <section id="rivalry" class="hidden"><div class="card"><h2>⚔️ Индекс принципиальности</h2><p class="notice">Индекс 0–100 отражает напряжённость противостояния: число матчей, близость результатов, частоту пенальти и среднюю результативность. Это не оценка силы игроков.</p><div id="rivalryBoard"></div></div></section>
 <section id="prime" class="hidden"><div class="card"><h2>📈 История прайма</h2><p class="notice">Оценки выступлений в каждом чемпионате: 82 — слабая игра, 88 — средняя, 95 — прайм. Линии строятся по всем сохранённым турнирам.</p><div class="toolbar"><select id="primePlayer"><option value="Д">MUTANT</option><option value="А">Артём</option><option value="Ф">Федос</option></select></div><div id="primeChart"></div><div id="primeSummary"></div></div></section>
 <section id="live" class="hidden"><div class="card"><h2>🔴 LIVE-турнир</h2><p class="notice">Создай чемпионат, выбери лигу и клуб каждого игрока в туре, заполняй матчи и наблюдай за таблицей. Результаты сохраняются только в этом браузере. Для просмотра с других телефонов потребуется публикация сайта и общая база.</p><div class="toolbar"><label>Дата <input type="date" id="liveDate"></label><label>Игра <select id="liveGame"><option value="27">FC 27</option><option value="26">FIFA 26</option></select></label><label>Туров <input type="number" id="liveRounds" min="1" max="20" value="7" style="max-width:85px"></label><button class="btn primary" id="liveStart">Создать турнир</button></div><div id="liveEditor" class="section"></div><div id="liveSaved" class="section"></div></div></section>
-<section id="clubs" class="hidden"><div class="card"><h2>Статистика клубов</h2><div class="toolbar"><label>Игрок <select id="clubPlayer"><option value="all">Все игроки</option><option value="Д">Данил / MUTANT</option><option value="А">Артём</option><option value="Ф">Федос</option></select></label><label>Команда <input id="clubSearch" type="search" placeholder="Название команды"></label></div><p class="notice">Учитываются сыгранные матчи с указанной командой. Победы по пенальти входят в общий зачёт. Строки отсортированы по победам, затем по забитым голам.</p><div class="tablewrap"><table><thead><tr><th>Команда</th><th>Матчи</th><th>Победы</th><th>% побед</th><th>Голы</th></tr></thead><tbody id="clubRows"></tbody></table></div></div></section><section id="data" class="hidden"><div class="card"><h2>Данные и прозрачность</h2><p class="notice">В приложение включены <strong>20 исторических чемпионатов</strong> и добавленные тобой новые турниры. Для каждого матча сохранены исходный счёт, победитель пенальти (если известен), тур, лига, доступные команды и особые пометки. Все данные работают без интернета.</p><div class="split"><button class="btn primary" id="export">Скачать весь архив JSON</button><button class="btn" id="csv">Скачать матчи CSV</button></div><div id="issues" class="section"></div><div class="section help"><strong>О периодах:</strong> декабрьские турниры без года условно отнесены к декабрю 2025 и FIFA 26. Для остальных граница FIFA 26 / FC 27 проведена по сентябрю 2026. Это рабочая классификация, которую можно уточнить.</div><p class="notice">Исторические результаты не изменяются. LIVE-турниры сохраняются только на этом устройстве; для переноса данных экспортируй архив.</p></div></section>
+<section id="clubs" class="hidden"><div class="card"><h2>Статистика клубов</h2><div class="toolbar"><label>Игрок <select id="clubPlayer"><option value="all">Все игроки</option><option value="Д">Данил / MUTANT</option><option value="А">Артём</option><option value="Ф">Федос</option></select></label><label>Команда <input id="clubSearch" type="search" placeholder="Название команды"></label><label>Сортировка <select id="clubSort"><option value="wins">По победам</option><option value="rate">По проценту побед</option><option value="picks">По частоте выбора</option></select></label></div><p class="notice">Учитываются сыгранные матчи с указанной командой. Победы по пенальти входят в общий зачёт. Один выбор — один игрок за этот клуб в одном туре.</p><div class="tablewrap"><table><thead><tr><th>Команда</th><th>Выборы</th><th>Матчи</th><th>Победы</th><th>% побед</th><th>Голы</th></tr></thead><tbody id="clubRows"></tbody></table></div></div></section><section id="data" class="hidden"><div class="card"><h2>Данные и прозрачность</h2><p class="notice">В приложение включены <strong>20 исторических чемпионатов</strong> и добавленные тобой новые турниры. Для каждого матча сохранены исходный счёт, победитель пенальти (если известен), тур, лига, доступные команды и особые пометки. Все данные работают без интернета.</p><div class="split"><button class="btn primary" id="export">Скачать весь архив JSON</button><button class="btn" id="csv">Скачать матчи CSV</button></div><div id="issues" class="section"></div><div class="section help"><strong>О периодах:</strong> декабрьские турниры без года условно отнесены к декабрю 2025 и FIFA 26. Для остальных граница FIFA 26 / FC 27 проведена по сентябрю 2026. Это рабочая классификация, которую можно уточнить.</div><p class="notice">Исторические результаты не изменяются. LIVE-турниры сохраняются только на этом устройстве; для переноса данных экспортируй архив.</p></div></section>
 </main><footer class="footer">PS CHAMPIONSHIP · ARCHIVE EDITION · Карточки игроков · Все матчи и официальные таблицы</footer></div><script>const DATA=[
   {
     "id": "dec1",
@@ -7260,7 +7260,7 @@ function renderRating(){
  $('ratingHistory').innerHTML=`<p class="notice">Последние три чемпионата: ${esc(last)}. Турнирная оценка: слабое выступление ≈82, среднее ≈88, прайм ≈95. Форма — взвешенное среднее трёх последних турниров (20% / 30% / 50%).</p><div class="tablewrap"><table><thead><tr><th>Игрок</th><th>Общий</th><th>Форма</th><th>Очки за 3 турнира</th></tr></thead><tbody>${ranked.map(p=>`<tr><td>${esc(N[p])}</td><td>${cards[p].overall}</td><td>${recent.result[p].score}</td><td>${recent.result[p].pts}</td></tr>`).join('')}</tbody></table></div><h3 class="section">Оценки выступлений по чемпионатам</h3><p class="muted small">Каждый чемпионат получает оценку от 75 до 99. Чемпионство, очки, голы и победы влияют на неё автоматически.</p><div class="tablewrap"><table><thead><tr><th>Чемпионат</th><th>Артём</th><th>MUTANT</th><th>Федос</th></tr></thead><tbody>${ts.slice().reverse().map(t=>`<tr><td>${esc(fmt(t))}</td>${['А','Д','Ф'].map(p=>{const g=tournamentGrade(t,p);return `<td><strong>${g?g.score:'—'}</strong>${g&&g.score>=95?' 🔥':''}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 function renderPlayers(){let s=calc(pool());$('playerCards').innerHTML=['Д','А','Ф'].map(p=>{let x=s[p];return `<div class="card"><div class="person"><div class="avatar">${p==='Д'?'735':p==='А'?'27':'22'}</div><div><h2 style="margin:0">${esc(N[p])}</h2><div class="muted small">${p==='Д'?'PLAYERS CLUB · MUTANT':'Участник лиги'}</div></div></div><div class="metric">${x.titles} 🏆</div><div class="section"><strong>🏆 Общий рейтинг: ${allCardRatings(DATA)[p].overall} / 100</strong><div class="progress"><div style="width:${allCardRatings(DATA)[p].overall}%"></div></div></div><div class="muted">Чемпионских титулов</div><div class="section tablewrap"><table><tbody>${[['Матчей',x.played],['Побед',x.w+x.wp],['Побед по пенальти',x.wp],['Поражений по пенальти',x.lp],['Голы',x.gf+':'+x.ga],['Разница',x.gf-x.ga],['Технических поражений',x.technical]].map(([k,v])=>`<tr><td>${k}</td><td class="right">${v}</td></tr>`).join('')}</tbody></table></div></div>`}).join('')}
-function clubStats(matches, player) {
+function clubStats(matches, player, sort) {
   const clubs = new Map();
   for (const m of matches) {
     if (m.unplayed) continue;
@@ -7268,21 +7268,24 @@ function clubStats(matches, player) {
       const name = m.teams?.[p]?.trim();
       if (!name || (player !== 'all' && p !== player)) continue;
       const key = name.toLocaleLowerCase('ru').replaceAll('ё','е');
-      if (!clubs.has(key)) clubs.set(key,{name,played:0,wins:0,gf:0,ga:0});
+      if (!clubs.has(key)) clubs.set(key,{name,played:0,wins:0,gf:0,ga:0,picks:new Set()});
       const row = clubs.get(key);
+      row.picks.add(JSON.stringify([m.tour,m.round,p]));
       row.played++;
       row.wins += Number(win(m) === p);
       row.gf += p === m.a ? m.x : m.y;
       row.ga += p === m.a ? m.y : m.x;
     }
   }
-  return [...clubs.values()].sort((a,b)=>b.wins-a.wins || b.gf-a.gf || a.name.localeCompare(b.name,'ru'));
+  const compare = {rate:(a,b)=>b.wins*a.played-a.wins*b.played || b.played-a.played,
+    picks:(a,b)=>b.picks.size-a.picks.size || b.played-a.played};
+  return [...clubs.values()].sort((a,b)=>(compare[sort]?.(a,b)??0) || b.wins-a.wins || b.gf-a.gf || a.name.localeCompare(b.name,'ru'));
 }
 function renderClubs() {
   const player = $('clubPlayer').value;
   const query = $('clubSearch').value.trim().toLocaleLowerCase('ru').replaceAll('ё','е');
-  const rows = clubStats(flat(pool()),player).filter(row=>row.name.toLocaleLowerCase('ru').replaceAll('ё','е').includes(query));
-  $('clubRows').innerHTML = rows.length ? rows.map(row=>'<tr><th scope="row">'+esc(row.name)+'</th><td>'+row.played+'</td><td>'+row.wins+'</td><td>'+Math.round(100*row.wins/row.played)+'%</td><td>'+row.gf+':'+row.ga+'</td></tr>').join('') : '<tr><td colspan="5">Команды не найдены</td></tr>';
+  const rows = clubStats(flat(pool()),player,$("clubSort").value).filter(row=>row.name.toLocaleLowerCase('ru').replaceAll('ё','е').includes(query));
+  $('clubRows').innerHTML = rows.length ? rows.map(row=>'<tr><th scope="row">'+esc(row.name)+'</th><td>'+row.picks.size+'</td><td>'+row.played+'</td><td>'+row.wins+'</td><td>'+Math.round(100*row.wins/row.played)+'%</td><td>'+row.gf+':'+row.ga+'</td></tr>').join('') : '<tr><td colspan="6">Команды не найдены</td></tr>';
 }
 function renderIssues(){let all=DATA.filter(t=>mismatch(t));$('issues').innerHTML=`<h3>Сверка архива</h3><p class="notice">Турниров с расхождениями между официальными таблицами и расчётом по матчам: <strong>${all.length}</strong> из ${DATA.length}. В списке ниже показаны расхождения; они не исправлены автоматически.</p>${all.map(t=>`<div class="entry row"><div><strong>${fmt(t)}</strong><div class="label">${mismatch(t)} игрок(а/ов) · ${esc(t.note||'Разница в очках или голах')}</div></div><button class="btn" data-tour="${t.id}">Проверить</button></div>`).join('')}<p class="notice">Особые случаи: 20.05 — боевая ничья 10:10, по одному очку; 25.09 — несыгранный матч Данил — Артём записан как 0:0 без очков; 28.09 — учтён стартовый штраф Данила −3.</p>`}
 
@@ -7389,6 +7392,7 @@ function download(name,content,type){let url=URL.createObjectURL(new Blob([conte
  });
 });
 $('clubPlayer').addEventListener('change',renderClubs);
+$('clubSort').addEventListener('change',renderClubs);
 $('clubSearch').addEventListener('input',renderClubs);
 $('primePlayer').addEventListener('change',renderPrime);
 $('liveDate').value=new Date().toISOString().slice(0,10);
